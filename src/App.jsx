@@ -1,19 +1,32 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import Home from '@/pages/Home';
+import Projects from '@/pages/Projects';
+import NotReady from '@/pages/NotReady';
+import Footer from '@/layouts/Footer/index';
 
 function App() {
   return (
-    <div>
-      <aside>left side</aside>
-      <div>
-        <header>
-          <nav>navbar</nav>
-        </header>
-        <Outlet />
-        <footer>footer</footer>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Footer />}>
+          <Route index element={<Home />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="blog" element={<NotReady />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+<div>
+  <aside>left side</aside>
+  <div>
+    <header>
+      <nav>navbar</nav>
+    </header>
+    <Outlet />
+    <footer>footer</footer>
+  </div>
+</div>;
