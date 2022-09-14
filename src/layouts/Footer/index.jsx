@@ -1,11 +1,11 @@
 import React from 'react';
-import { SocialLinks } from './Footer.styled';
-
 import { ReactComponent as EmailLogo } from '@/assets/images/email.svg';
 import { ReactComponent as GithubLogo } from '@/assets/images/github.svg';
 import { ReactComponent as LinkedinLogo } from '@/assets/images/linkedin.svg';
 import { ReactComponent as TelegramLogo } from '@/assets/images/telegram.svg';
 import { ReactComponent as WhatsAppLogo } from '@/assets/images/whatsapp.svg';
+
+import { SocialLinks } from './Footer.styled';
 
 function Footer() {
   return (

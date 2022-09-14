@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Wrapper, Name, Navbar, List, ListItem } from './Header.styled';
 import { ReactComponent as MoonLogo } from '@/assets/images/moon.svg';
+
+import { Wrapper, Name, Navbar, List, ListItem } from './Header.styled';
 
 function Header() {
   return (
