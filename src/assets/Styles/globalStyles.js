@@ -49,6 +49,7 @@ button {
   font: inherit;
   background: none;
   border: none;
+  padding:0;
   cursor: pointer;
 }
 

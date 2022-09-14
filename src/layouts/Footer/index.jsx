@@ -16,22 +16,22 @@ function Footer() {
           <EmailLogo />
         </li>
         <li>
-          <a href="/">
+          <a href="https://github.com/kasra-pak" target="_blank" rel="noreferrer">
             <GithubLogo />
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="https://www.linkedin.com/in/kasra-pak" target="_blank" rel="noreferrer">
             <LinkedinLogo />
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="https://t.me/kasra_pak" target="_blank" rel="noreferrer">
             <TelegramLogo />
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="/" target="_blank" rel="noreferrer">
             <WhatsAppLogo />
           </a>
         </li>

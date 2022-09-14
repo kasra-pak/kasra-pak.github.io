@@ -14,14 +14,14 @@ const SocialLinks = styled.ul`
     text-shadow: var(--shadow);
   }
 
-  a {
-    padding: 0.25rem;
-  }
-
   .email {
     letter-spacing: 1.5px;
     font-weight: 600;
     cursor: pointer;
+  }
+
+  a {
+    padding: 0.25rem;
   }
 
   svg {
