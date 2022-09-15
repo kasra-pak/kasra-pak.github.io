@@ -50,6 +50,17 @@ const SocialLinks = styled.ul`
       display: block;
     }
   }
+
+  @media screen and (min-width: 650px) {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    letter-spacing: 0.5px;
+    max-width: 450px;
+    margin-left: auto;
+
+    svg {
+      width: clamp(16px, 2.25vw, 20px);
+    }
+  }
 `;
 
 export { SocialLinks };
