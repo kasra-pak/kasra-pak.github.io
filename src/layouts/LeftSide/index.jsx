@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { ReactComponent as Logo } from '@/assets/images/cyclone.svg';
+
+import { Wrapper } from './LeftSide.styled';
 
 function LeftSide() {
   const location = useLocation();
@@ -13,7 +16,11 @@ function LeftSide() {
     }
   }, [location]);
 
-  return <aside>{content}</aside>;
+  return (
+    <Wrapper>
+      <Logo className="logo" />
+    </Wrapper>
+  );
 }
 
 export default LeftSide;
