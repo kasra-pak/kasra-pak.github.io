@@ -76,6 +76,11 @@ body {
   background-position: -40px;
   /* min-height: 100vh; */
   overflow-x: hidden;
+
+@media screen and (min-width: 568px) {
+  background-position: 7vw;
+
+}
 }
 `;
 
