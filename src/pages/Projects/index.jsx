@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Card from '@/components/Card';
+import List from '@/components/List';
 
-import { Wrapper } from './Projects.styled';
+import { Wrapper, ProjectsListContainer } from './Projects.styled';
 
 const data = [
   {
@@ -49,14 +50,30 @@ const data = [
 function Projects() {
   const [currentProjectId, setCurrentProjectId] = useState('2');
 
+  const selectItem = id => {
+    setCurrentProjectId(id);
+  };
+
   return (
     <Wrapper>
       <Card data={data} currentId={currentProjectId} setCurrentId={setCurrentProjectId} />
-      <section
-      // projectTitles={data.map(item => item.title)}
-      // currentProjectId={currentProjectId}
-      // setCurrentProjectId={setCurrentProjectId}
-      ></section>
+      <ProjectsListContainer>
+        <h2>projects list</h2>
+        <List>
+          {data.map(item => (
+            <li
+              key={item.id}
+              className={item.id === currentProjectId ? 'active' : ''}
+              onClick={() => selectItem(item.id)}
+              onKeyDown={() => selectItem(item.id)}
+              role="option"
+              aria-selected={item.id === currentProjectId}
+            >
+              {item.title}
+            </li>
+          ))}
+        </List>
+      </ProjectsListContainer>
     </Wrapper>
   );
 }
