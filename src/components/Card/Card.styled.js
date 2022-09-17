@@ -20,6 +20,7 @@ const Header = styled.div`
   justify-content: space-between;
   gap: 1em;
   padding-bottom: 0.5em;
+  border-bottom: 1px solid hsl(var(--color-text) / 0.1);
 `;
 
 const Title = styled.h2`
@@ -65,7 +66,6 @@ const DropDownContainer = styled.div`
 
 const Content = styled.div`
   min-height: 200px;
-  border-top: 1px solid hsl(var(--color-text) / 0.1);
   border-bottom: 1px solid hsl(var(--color-text) / 0.1);
   margin-bottom: 0.5em;
   padding: 1em 0;
