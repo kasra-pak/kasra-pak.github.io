@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import BackgroundImage from '@/assets/images/background.svg';
+import BackgroundImage from '@/assets/images/background.jpg';
 
 const GlobalStyle = createGlobalStyle`
 /* ================== */
@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
   /* hsl values */
   --color-brand: 212 100% 47%;
   --color-text: 221 58% 9%;
+  --color-light-gray: 0 0% 87%;
   --color-white: 0 0% 97%;
 
   --shadow: 0 0 3px hsl(var(--color-text) / 0.2);

@@ -53,7 +53,6 @@ const Btn = styled.button`
   letter-spacing: 0.5px;
   border-radius: 0.25em;
   padding: 0.6em 1em;
-  margin: 0.25em;
 
   @media screen and (min-width: 650px) {
     font-size: clamp(1rem, 2vw, 1.25rem);
