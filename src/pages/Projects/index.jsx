@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '@/components/Card';
 
 import { Wrapper } from './Projects.styled';
@@ -47,10 +47,16 @@ const data = [
 ];
 
 function Projects() {
+  const [currentProjectId, setCurrentProjectId] = useState('2');
+
   return (
     <Wrapper>
-      <Card />
-      <section></section>
+      <Card data={data} currentId={currentProjectId} setCurrentId={setCurrentProjectId} />
+      <section
+      // projectTitles={data.map(item => item.title)}
+      // currentProjectId={currentProjectId}
+      // setCurrentProjectId={setCurrentProjectId}
+      ></section>
     </Wrapper>
   );
 }

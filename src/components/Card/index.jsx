@@ -17,61 +17,66 @@ import {
   Footer,
 } from './Card.styled';
 
-function Card() {
+function Card({ data, currentId, setCurrentId }) {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+
+  const currentData = data.find(item => item.id === currentId);
 
   const toggleDropDown = () => {
     setIsDropDownOpen(prevState => !prevState);
   };
 
+  const selectItem = id => {
+    setCurrentId(id);
+    setIsDropDownOpen(false);
+  };
+
   return (
     <Wrapper>
       <Header>
-        <Title>rest countries api</Title>
+        <Title>{currentData.title}</Title>
         <DropDownBtn isOpen={isDropDownOpen} toggle={toggleDropDown} />
       </Header>
 
       <Container>
         <DropDownContainer isOpen={isDropDownOpen}>
           <List>
-            <li>space tourism</li>
-            <li>movie database</li>
-            <li>rest countries api</li>
-            <li>fylo landing page</li>
+            {data.map(item => (
+              <li
+                key={item.id}
+                className={item.id === currentId ? 'active' : ''}
+                onClick={() => selectItem(item.id)}
+                onKeyDown={() => selectItem(item.id)}
+                role="option"
+                aria-selected={item.id === currentId}
+              >
+                {item.title}
+              </li>
+            ))}
           </List>
         </DropDownContainer>
         <Content isHidden={isDropDownOpen}>
           <Technologies>
-            <li>html</li>
-            <li>css</li>
-            <li>react</li>
+            {currentData.techs.map((tech, idx) => (
+              <li key={idx}>{tech}</li>
+            ))}
           </Technologies>
-          <Description>Integrates with the REST Countries API to pull country data and display it.</Description>
+          <Description>{currentData.desc}</Description>
           <Features>
-            <li>
-              <Check />
-              <p>search</p>
-            </li>
-            <li>
-              <Check />
-              <p>filter search results</p>
-            </li>
-            <li>
-              <Check />
-              <p>detailed information</p>
-            </li>
-            <li>
-              <Check />
-              <p>dark mode toggle</p>
-            </li>
+            {currentData.features.map((feature, idx) => (
+              <li key={idx}>
+                <Check />
+                <p>{feature}</p>
+              </li>
+            ))}
           </Features>
         </Content>
         <Footer isHidden={isDropDownOpen}>
           <Button variant="contained" color="black">
-            live site
+            <a href={currentData.url}>live site</a>
           </Button>
           <Button variant="outlined" color="black">
-            view code
+            <a href={currentData.repository}>view code</a>
           </Button>
         </Footer>
       </Container>
