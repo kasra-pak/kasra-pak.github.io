@@ -2,52 +2,59 @@ import styled, { css } from 'styled-components';
 
 const variants = {
   contained: css`
-    background-color: hsl(var(--color));
-    color: hsl(var(--color-white));
-    border: 1px solid hsl(var(--color));
+    background-color: hsl(var(--bg-color));
+    color: hsl(var(--fg-color));
+    border: 1px solid hsl(var(--bg-color));
 
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
     &:hover {
       background-color: transparent;
-      color: hsl(var(--color));
+      color: hsl(var(--bg-color));
       border: 1px solid currentColor;
     }
   `,
   outlined: css`
-    border: 1px solid hsl(var(--color) / 0.2);
+    border: 1px solid hsl(var(--bg-color) / 0.2);
     transition: border-color 0.2s ease;
 
     &:hover {
-      border: 1px solid hsl(var(--color));
+      border: 1px solid hsl(var(--bg-color));
     }
   `,
 };
 
 const colors = {
   black: css`
-    --color: var(--color-text);
+    --bg-color: var(--color-text);
+    --fg-color: var(--color-white);
   `,
   blue: css`
-    --color: var(--color-brand);
+    --bg-color: var(--color-brand);
+    --fg-color: var(--color-white);
+  `,
+  white: css`
+    --bg-color: var(--color-white);
+    --fg-color: var(--color-text);
   `,
 };
 
 const elevated = css`
-  box-shadow: 0 2px 6px hsl(var(--color) / 0.4);
+  box-shadow: 0 2px 6px hsl(var(--bg-color) / 0.4);
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   border: none;
 
   &:hover {
-    background-color: hsl(var(--color) / 0.95);
-    box-shadow: 0 6px 15px hsl(var(--color) / 0.2);
+    background-color: hsl(var(--bg-color) / 0.95);
+    box-shadow: 0 6px 15px hsl(var(--bg-color) / 0.2);
     border: none;
     color: hsl(var(--color-white));
   }
 `;
 
 const Btn = styled.button`
-  --color: var(--color-text);
+  --bg-color: var(--color-text);
+  --fg-color: var(--color-white);
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 0.5px;

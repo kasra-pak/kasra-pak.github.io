@@ -1,5 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import BackgroundImage from '@/assets/images/background.jpg';
+import CycloneImage from '@/assets/images/bg-cyclone.jpg';
+import CycloneImageHorizontal from '@/assets/images/bg-cyclone-horizontal.jpg';
 
 const GlobalStyle = createGlobalStyle`
 /* ================== */
@@ -71,17 +73,30 @@ a {
 body {
   font-family: var(--font-main);
   color: hsl(var(--color-text));
-  background: url(${BackgroundImage});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: -40px;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   overflow-x: hidden;
 
-@media screen and (min-width: 568px) {
-  background-position: 7vw;
+  ${props =>
+    props.notFound
+      ? css`
+          background: url(${CycloneImage});
 
-}
+          @media screen and (min-width: 1000px) {
+            background-image: url(${CycloneImageHorizontal});
+          }
+        `
+      : css`
+          background-image: url(${BackgroundImage});
+          background-position: -40px;
+
+          @media screen and (min-width: 568px) {
+            background-position: 7vw;
+          }
+        `}
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 `;
 
