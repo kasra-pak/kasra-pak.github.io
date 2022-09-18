@@ -72,12 +72,16 @@ function Card({ data, currentId, setCurrentId }) {
           </Features>
         </Content>
         <Footer isHidden={isDropDownOpen}>
-          <Button variant="contained" color="black">
-            <a href={currentData.url}>live site</a>
-          </Button>
-          <Button variant="outlined" color="black">
-            <a href={currentData.repository}>view code</a>
-          </Button>
+          <a href={currentData.url} target="_blank" rel="noreferrer">
+            <Button variant="contained" color="black">
+              live site
+            </Button>
+          </a>
+          <a href={currentData.repository} target="_blank" rel="noreferrer">
+            <Button variant="outlined" color="black">
+              view code
+            </Button>
+          </a>
         </Footer>
       </Container>
     </Wrapper>
