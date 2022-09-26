@@ -15,12 +15,12 @@ function Header() {
       <Navbar>
         <List>
           <ListItem>
-            <NavLink to="/blog" activeClassName="active">
+            <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : undefined)}>
               blog
             </NavLink>
           </ListItem>
           <ListItem>
-            <NavLink to="/projects" activeClassName="active">
+            <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : undefined)}>
               projects
             </NavLink>
           </ListItem>
