@@ -61,13 +61,21 @@ const Btn = styled.button`
   border-radius: 0.25em;
   padding: 0.6em 1em;
 
-  @media screen and (min-width: 650px) {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-  }
-
   ${props => props.variant && variants[props.variant]}
   ${props => props.color && colors[props.color]}
   ${props => props.elevated && elevated}
+  
+  &:disabled {
+    background-color: hsl(var(--color-text) / 0.1);
+    color: hsl(var(--color-text) / 0.4);
+    border: 1px solid transparent;
+    box-shadow: inset 0 0 15px -10px currentColor;
+    cursor: not-allowed;
+  }
+
+  @media screen and (min-width: 650px) {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
 `;
 
 export { Btn };

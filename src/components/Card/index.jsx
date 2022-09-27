@@ -73,12 +73,12 @@ function Card({ data, currentId, setCurrentId }) {
         </Content>
         <Footer isHidden={isDropDownOpen}>
           <a href={currentData.url} target="_blank" rel="noreferrer">
-            <Button variant="contained" color="black">
+            <Button variant="contained" color="black" disabled={!currentData.url}>
               live site
             </Button>
           </a>
           <a href={currentData.repository} target="_blank" rel="noreferrer">
-            <Button variant="outlined" color="black">
+            <Button variant="outlined" color="black" disabled={!currentData.repository}>
               view code
             </Button>
           </a>
