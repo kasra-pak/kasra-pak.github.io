@@ -25,6 +25,7 @@ const Header = styled.div`
 
 const Title = styled.h2`
   text-transform: capitalize;
+  text-shadow: ${props => props.selectMode && '0 0 3px hsl(var(--color-brand) / 0.1)'};
 
   @media screen and (min-width: 650px) {
     font-size: clamp(1.5rem, 3vw, 2.5rem);

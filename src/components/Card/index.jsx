@@ -34,7 +34,7 @@ function Card({ data, currentId, setCurrentId }) {
   return (
     <Wrapper>
       <Header>
-        <Title>{currentData.title}</Title>
+        <Title selectMode={isDropDownOpen}>{currentData.title}</Title>
         <DropDownBtn isOpen={isDropDownOpen} toggle={toggleDropDown} />
       </Header>
 
