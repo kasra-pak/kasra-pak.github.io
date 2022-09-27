@@ -30,7 +30,7 @@ function PageLayout() {
               classNames="page-transition"
               unmountOnExit
             >
-              {currentOutlet}
+              {() => <div ref={nodeRef}>{currentOutlet}</div>}
             </CSSTransition>
           </SwitchTransition>
         </PageTransitionContainer>
