@@ -60,10 +60,12 @@ const List = styled.ul`
 const ListItem = styled.li`
   color: hsl(var(--color-text));
   fill: hsl(var(--color-text));
-  padding: 0.25em 0;
-  transition: fill 0.2s, color 0.2s;
+  transition: fill 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
   cursor: pointer;
-  transition: text-shadow 0.2s ease;
+
+  a {
+    padding: 0.25em 0;
+  }
 
   &:hover {
     color: hsl(var(--color-text));
