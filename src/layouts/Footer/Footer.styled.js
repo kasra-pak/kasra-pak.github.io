@@ -14,12 +14,6 @@ const SocialLinks = styled.ul`
     text-shadow: var(--shadow);
   }
 
-  .email {
-    letter-spacing: 1.5px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
   a {
     padding: 0.25rem;
   }
@@ -31,24 +25,6 @@ const SocialLinks = styled.ul`
 
   li:hover svg {
     filter: drop-shadow(var(--shadow));
-  }
-
-  .email svg {
-    display: block;
-  }
-
-  .email span {
-    display: none;
-  }
-
-  @media screen and (min-width: 340px) {
-    .email svg {
-      display: none;
-    }
-
-    .email span {
-      display: block;
-    }
   }
 
   @media screen and (min-width: 650px) {
