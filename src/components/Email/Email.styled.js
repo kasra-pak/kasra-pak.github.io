@@ -13,6 +13,10 @@ const EmailAddress = styled.span`
     cursor: pointer;
   }
 
+  & + svg path {
+    pointer-events: none;
+  }
+
   @media screen and (min-width: 340px) {
     display: block;
 
