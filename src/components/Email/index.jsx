@@ -1,29 +1,32 @@
 import React, { useRef, useState, useCallback } from 'react';
-import Alert from '@/components/Alert';
 import { debounce } from '@/utils';
+import Alert from '@/components/Alert';
 import { ReactComponent as EmailLogo } from '@/assets/images/email.svg';
 
-import { EmailAddress } from './Email.styled';
+import { Wrapper, EmailAddress } from './Email.styled';
 
 function Email() {
   const [isAlertVisible, setIsAlertVisible] = useState(false);
-  const emailText = 'kasrapak69@gmail.com';
+  const emailAddress = 'kasrapak69@gmail.com';
   const emailRef = useRef();
 
   const copyToClipboard = e => {
-    const targetElement = e.target.localName;
-    const textIsClicked = targetElement === 'span' || targetElement === 'button';
-    const logoIsClicked = targetElement === 'svg';
+    // check if user has pressed "return" key
+    if (e.keyCode && e.keyCode !== 13) return;
 
-    if (textIsClicked) {
-      emailRef.current.textContent = 'Copied to Clipboard';
-      resetTextWithDelay(emailText);
-    } else if (logoIsClicked) {
+    const isEmailAddressHidden = window.getComputedStyle(emailRef.current).display === 'none';
+
+    navigator.clipboard.writeText(emailAddress);
+
+    if (isEmailAddressHidden) {
+      // When you click the email logo
       setIsAlertVisible(true);
       setIsAlertVisibleWithDelay(false);
+    } else {
+      // When you click the email text
+      emailRef.current.textContent = 'Copied to Clipboard';
+      resetTextWithDelay(emailAddress);
     }
-
-    navigator.clipboard.writeText(emailText);
   };
 
   const resetTextWithDelay = useCallback(
@@ -44,10 +47,10 @@ function Email() {
     <>
       <Alert show={isAlertVisible}>Copied to Clipboard</Alert>
 
-      <button type="button" onClick={copyToClipboard}>
-        <EmailAddress ref={emailRef}>{emailText}</EmailAddress>
+      <Wrapper tabIndex={0} onClick={copyToClipboard} onKeyDown={copyToClipboard}>
+        <EmailAddress ref={emailRef}>{emailAddress}</EmailAddress>
         <EmailLogo />
-      </button>
+      </Wrapper>
     </>
   );
 }
