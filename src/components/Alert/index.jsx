@@ -8,7 +8,7 @@ function Alert({ show, children }) {
 
   return (
     <CSSTransition nodeRef={nodeRef} in={show} timeout={delayTime} classNames="alert">
-      <Wrapper role="alert" show={show} ref={nodeRef}>
+      <Wrapper role="alert" ref={nodeRef}>
         <Content>{children}</Content>
       </Wrapper>
     </CSSTransition>

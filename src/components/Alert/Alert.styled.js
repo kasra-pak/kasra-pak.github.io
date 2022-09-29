@@ -41,7 +41,7 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
-  background-color: hsl(var(--color-text) / 0.8);
+  background-color: hsl(var(--color-text) / 0.9);
   color: hsl(var(--color-white));
   max-width: 80%;
   text-align: center;
