@@ -7,6 +7,7 @@ const Wrapper = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 3rem;
   padding: 1rem;
   padding: clamp(1rem, 5vw, 2rem);
