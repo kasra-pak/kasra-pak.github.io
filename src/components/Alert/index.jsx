@@ -1,22 +1,17 @@
 import React, { useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
 
-import { Wrapper, Content } from './Alert.styled';
+import { delayTime, Wrapper, Content } from './Alert.styled';
 
 function Alert({ show, children }) {
-  const alertRef = useRef();
-
-  const handleTransition = () => {
-    if (alertRef.current.style.opacity === 1) {
-      alertRef.current.style.display = 'none';
-    } else {
-      alertRef.current.style.display = 'flex';
-    }
-  };
+  const nodeRef = useRef(null);
 
   return (
-    <Wrapper role="alert" ref={alertRef} show={show} onTransitionEnd={handleTransition}>
-      <Content>{children}</Content>
-    </Wrapper>
+    <CSSTransition nodeRef={nodeRef} in={show} timeout={delayTime} classNames="alert">
+      <Wrapper role="alert" show={show} ref={nodeRef}>
+        <Content>{children}</Content>
+      </Wrapper>
+    </CSSTransition>
   );
 }
 
