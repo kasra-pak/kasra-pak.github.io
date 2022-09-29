@@ -30,11 +30,11 @@ function Footer() {
             <TelegramLogo />
           </a>
         </li>
-        <li>
-          <a href="/" target="_blank" rel="noreferrer">
+        {/* <li>
+          <a href="" target="_blank" rel="noreferrer">
             <WhatsAppLogo />
           </a>
-        </li>
+        </li> */}
       </SocialLinks>
     </footer>
   );

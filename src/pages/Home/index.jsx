@@ -15,8 +15,8 @@ function Home() {
           Frontend Developer
         </Title>
         <Subtitle>
-          A 25 year young software engineer, based in Iran. Graduated from University of Kurdistan. Has great passion
-          for writting clean and maintainable code. Also enjoys learning new things from new people.
+          A 25 year young software engineer, based in Iran. Graduated from University of Kurdistan. Have great passion
+          for writting clean and maintainable code. Also enjoy learning new things from new people.
         </Subtitle>
         <Button type="button" variant="contained" elevated color="blue">
           my resume
