@@ -4,9 +4,11 @@ import Alert from '@/components/Alert';
 import { ReactComponent as EmailLogo } from '@/assets/images/email.svg';
 
 import { Wrapper, EmailAddress } from './Email.styled';
+import TextToggler from '../TextToggler';
 
 function Email() {
   const [isAlertVisible, setIsAlertVisible] = useState(false);
+  const [showAlter, setShowAlter] = useState(false);
   const emailAddress = 'kasrapak69@gmail.com';
   const emailRef = useRef();
 
@@ -24,14 +26,14 @@ function Email() {
       setIsAlertVisibleWithDelay(false);
     } else {
       // When you click the email text
-      emailRef.current.textContent = 'Copied to Clipboard';
-      resetTextWithDelay(emailAddress);
+      setShowAlter(true);
+      setShowAlterWithDelay(false);
     }
   };
 
-  const resetTextWithDelay = useCallback(
-    debounce(text => {
-      emailRef.current.textContent = text;
+  const setShowAlterWithDelay = useCallback(
+    debounce(state => {
+      setShowAlter(state);
     }, 2000),
     [],
   );
@@ -48,7 +50,15 @@ function Email() {
       <Alert show={isAlertVisible}>Copied to Clipboard</Alert>
 
       <Wrapper tabIndex={0} onClick={copyToClipboard} onKeyDown={copyToClipboard}>
-        <EmailAddress ref={emailRef}>{emailAddress}</EmailAddress>
+        {/* <EmailAddress ref={emailRef}>
+          <div>Copied to Clipboard</div>
+          {emailAddress}
+        </EmailAddress> */}
+        <EmailAddress ref={emailRef}>
+          <TextToggler alter="Copied to Clipboard" showAlter={showAlter}>
+            {emailAddress}
+          </TextToggler>
+        </EmailAddress>
         <EmailLogo />
       </Wrapper>
     </>

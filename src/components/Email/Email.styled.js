@@ -4,16 +4,16 @@ const Wrapper = styled.div`
   padding: 0.25em;
   cursor: pointer;
 `;
-const EmailAddress = styled.span`
+
+const EmailAddress = styled.div`
   letter-spacing: 1.5px;
   font-weight: 600;
-  cursor: pointer;
   display: none;
+  cursor: pointer;
 
   & + svg {
     transition: filter 0.2s ease;
     display: block;
-    /* cursor: pointer; */
   }
 
   & + svg path {
