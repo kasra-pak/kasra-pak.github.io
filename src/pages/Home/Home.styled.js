@@ -15,6 +15,10 @@ const Title = styled.h2`
   font-weight: bold;
   font-style: italic;
 
+  &::selection {
+    text-shadow: 2px 2px 0 hsl(var(--color-text));
+  }
+
   @media screen and (min-width: 650px) {
     font-size: clamp(3.15rem, 6vw, 6rem);
     /* font-size: 4rem; */

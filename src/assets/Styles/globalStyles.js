@@ -70,6 +70,12 @@ a {
 /* ============== */
 /* Custom Styles */
 /* ============ */
+::selection {
+  background-color: hsl(var(--color-brand) /.9);
+  color: hsl(var(--color-white));
+  text-shadow: none;
+}
+
 body {
   font-family: var(--font-main);
   color: hsl(var(--color-text));
