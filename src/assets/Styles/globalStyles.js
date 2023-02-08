@@ -79,7 +79,6 @@ a {
 body {
   font-family: var(--font-main);
   color: hsl(var(--color-text));
-  min-height: 100vh;
   overflow-x: hidden;
 
   ${props =>
