@@ -230,7 +230,7 @@ Error generating stack: `+i.message+`
       width: clamp(16px, 2.25vw, 20px);
     }
   }
-`,Kv=K.button1`
+`,Kv=K.button`
   width: 100%;
 `;function Gv(){const e=R.exports.useRef(null);return le(Wv,{children:[k(Hv,{children:le(al,{to:"/",children:["kasra",k("span",{children:" pak eteghad"})]})}),k(Vv,{children:k(Uv,{children:le(Qv,{ref:e,children:[k(ql,{children:k(Uc,{to:"/blog",className:({isActive:t})=>t?"active":void 0,children:"blog"})}),k(ql,{children:k(Uc,{to:"/projects",className:({isActive:t})=>t?"active":void 0,children:"projects"})}),k(ql,{className:"moon",children:k(Kv,{children:k(Bv,{})})})]})})})]})}function Yv(e,t){let n;return function(){clearTimeout(n),n=setTimeout(()=>e.apply(this,arguments),t)}}const os=200,Xv=K.div`
   display: none;
