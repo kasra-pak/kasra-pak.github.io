@@ -100,7 +100,7 @@ const ListItem = styled.li`
   }
 `;
 
-const ThemeToggler = styled.button1`
+const ThemeToggler = styled.button`
   width: 100%;
 `;
 
