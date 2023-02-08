@@ -3,36 +3,36 @@ import { Link } from 'react-router-dom';
 import Button from '@/components/Button';
 import { ReactComponent as CycloneImg } from '@/assets/images/cyclone.svg';
 
-import { Wrapper, Overlay, Content, Title, Status, Subtitle } from './NotFound.styled';
+import * as S from './NotFound.styled';
 
 function NotFound() {
   return (
-    <Wrapper>
-      <Overlay>
-        <Content>
-          <Title>
-            <Status>
+    <S.Wrapper>
+      <S.Overlay>
+        <S.Content>
+          <S.Title>
+            <S.Status>
               <span>4</span>
               <CycloneImg />
               <span>4</span>
-            </Status>
+            </S.Status>
             oooops!
             <br />
             page not found
-          </Title>
-          <Subtitle>
+          </S.Title>
+          <S.Subtitle>
             This page doesn&apos;t exist or was removed!
             <br />
             We suggest you back to home.
-          </Subtitle>
+          </S.Subtitle>
           <Link to="/">
             <Button type="button" variant="contained" color="white">
               back to home
             </Button>
           </Link>
-        </Content>
-      </Overlay>
-    </Wrapper>
+        </S.Content>
+      </S.Overlay>
+    </S.Wrapper>
   );
 }
 

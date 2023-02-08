@@ -3,40 +3,40 @@ import { Link, NavLink } from 'react-router-dom';
 import FadeScroll from '@/components/FadeScroll';
 import { ReactComponent as MoonLogo } from '@/assets/images/moon.svg';
 
-import { Wrapper, Name, Navbar, List, ListItem, ThemeToggler } from './Header.styled';
+import * as S from './Header.styled';
 
 function Header() {
   const nodeRef = useRef(null);
 
   return (
-    <Wrapper>
-      <Name>
+    <S.Wrapper>
+      <S.Name>
         <Link to="/">
           kasra<span> pak eteghad</span>
         </Link>
-      </Name>
-      <Navbar>
+      </S.Name>
+      <S.Navbar>
         <FadeScroll>
-          <List ref={nodeRef}>
-            <ListItem>
+          <S.List ref={nodeRef}>
+            <S.ListItem>
               <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : undefined)}>
                 blog
               </NavLink>
-            </ListItem>
-            <ListItem>
+            </S.ListItem>
+            <S.ListItem>
               <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : undefined)}>
                 projects
               </NavLink>
-            </ListItem>
-            <ListItem className="moon">
-              <ThemeToggler>
+            </S.ListItem>
+            <S.ListItem className="moon">
+              <S.ThemeToggler>
                 <MoonLogo />
-              </ThemeToggler>
-            </ListItem>
-          </List>
+              </S.ThemeToggler>
+            </S.ListItem>
+          </S.List>
         </FadeScroll>
-      </Navbar>
-    </Wrapper>
+      </S.Navbar>
+    </S.Wrapper>
   );
 }
 

@@ -4,18 +4,7 @@ import List from '@/components/List';
 import Button from '@/components/Button';
 import { ReactComponent as Check } from '@/assets/images/check.svg';
 
-import {
-  Wrapper,
-  Header,
-  Title,
-  Container,
-  DropDownContainer,
-  Content,
-  Technologies,
-  Description,
-  Features,
-  Footer,
-} from './Card.styled';
+import * as S from './Card.styled';
 
 function Card({ data, currentId, setCurrentId }) {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
@@ -32,14 +21,14 @@ function Card({ data, currentId, setCurrentId }) {
   };
 
   return (
-    <Wrapper>
-      <Header>
-        <Title selectMode={isDropDownOpen}>{currentData.title}</Title>
+    <S.Wrapper>
+      <S.Header>
+        <S.Title selectMode={isDropDownOpen}>{currentData.title}</S.Title>
         <DropDownBtn isOpen={isDropDownOpen} toggle={toggleDropDown} />
-      </Header>
+      </S.Header>
 
-      <Container>
-        <DropDownContainer isOpen={isDropDownOpen}>
+      <S.Container>
+        <S.DropDownContainer isOpen={isDropDownOpen}>
           <List>
             {data.map(item => (
               <li
@@ -54,24 +43,24 @@ function Card({ data, currentId, setCurrentId }) {
               </li>
             ))}
           </List>
-        </DropDownContainer>
-        <Content isHidden={isDropDownOpen}>
-          <Technologies>
+        </S.DropDownContainer>
+        <S.Content isHidden={isDropDownOpen}>
+          <S.Technologies>
             {currentData.techs.map((tech, idx) => (
               <li key={idx}>{tech}</li>
             ))}
-          </Technologies>
-          <Description>{currentData.desc}</Description>
-          <Features>
+          </S.Technologies>
+          <S.Description>{currentData.desc}</S.Description>
+          <S.Features>
             {currentData.features.map((feature, idx) => (
               <li key={idx}>
                 <Check />
                 <p>{feature}</p>
               </li>
             ))}
-          </Features>
-        </Content>
-        <Footer isHidden={isDropDownOpen}>
+          </S.Features>
+        </S.Content>
+        <S.Footer isHidden={isDropDownOpen}>
           <a href={currentData.url} target="_blank" rel="noreferrer">
             <Button variant="contained" color="black" disabled={!currentData.url}>
               live site
@@ -82,9 +71,9 @@ function Card({ data, currentId, setCurrentId }) {
               view code
             </Button>
           </a>
-        </Footer>
-      </Container>
-    </Wrapper>
+        </S.Footer>
+      </S.Container>
+    </S.Wrapper>
   );
 }
 

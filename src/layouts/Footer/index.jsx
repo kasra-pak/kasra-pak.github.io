@@ -7,12 +7,12 @@ import { ReactComponent as LinkedinLogo } from '@/assets/images/linkedin.svg';
 import { ReactComponent as TelegramLogo } from '@/assets/images/telegram.svg';
 import { ReactComponent as WhatsAppLogo } from '@/assets/images/whatsapp.svg';
 
-import { SocialLinks } from './Footer.styled';
+import * as S from './Footer.styled';
 
 function Footer() {
   return (
     <footer>
-      <SocialLinks>
+      <S.SocialLinks>
         {/* <li>
           <Email />
         </li> */}
@@ -36,7 +36,7 @@ function Footer() {
         {/* <SocialLink href="" target="_blank" rel="noreferrer">
           <WhatsAppLogo />
         </SocialLink> */}
-      </SocialLinks>
+      </S.SocialLinks>
     </footer>
   );
 }

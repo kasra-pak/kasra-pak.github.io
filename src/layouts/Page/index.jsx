@@ -8,7 +8,7 @@ import Header from '@/layouts/Header';
 import Footer from '@/layouts/Footer';
 import { routes } from '@/routes/main';
 
-import { Wrapper, Content } from './Page.styled';
+import * as S from './Page.styled';
 
 function PageLayout() {
   const location = useLocation();
@@ -17,9 +17,9 @@ function PageLayout() {
   const { nodeRef } = routes.find(route => route.path === location.pathname) ?? {};
 
   return (
-    <Wrapper>
+    <S.Wrapper>
       <LeftSide />
-      <Content>
+      <S.Content>
         <Header />
         <PageTransitionContainer>
           <SwitchTransition>
@@ -35,8 +35,8 @@ function PageLayout() {
           </SwitchTransition>
         </PageTransitionContainer>
         <Footer />
-      </Content>
-    </Wrapper>
+      </S.Content>
+    </S.Wrapper>
   );
 }
 

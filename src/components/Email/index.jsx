@@ -1,11 +1,11 @@
 import React from 'react';
 import { ReactComponent as EmailLogo } from '@/assets/images/email.svg';
-import { EmailAddress } from './Email.styled';
+import * as S from './Email.styled';
 
 function Email({ children }) {
   return (
     <>
-      <EmailAddress>{children}</EmailAddress>
+      <S.EmailAddress>{children}</S.EmailAddress>
       <EmailLogo />
     </>
   );

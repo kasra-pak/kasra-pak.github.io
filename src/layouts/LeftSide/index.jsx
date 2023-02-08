@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ReactComponent as Logo } from '@/assets/images/cyclone.svg';
 
-import { Wrapper } from './LeftSide.styled';
+import * as S from './LeftSide.styled';
 
 function LeftSide() {
   const location = useLocation();
@@ -17,9 +17,9 @@ function LeftSide() {
   }, [location]);
 
   return (
-    <Wrapper>
+    <S.Wrapper>
       <Logo className="logo" />
-    </Wrapper>
+    </S.Wrapper>
   );
 }
 

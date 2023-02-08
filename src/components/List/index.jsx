@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Wrapper } from './List.styled';
+import * as S from './List.styled';
 
 function List({ children }) {
-  return <Wrapper>{children}</Wrapper>;
+  return <S.Wrapper>{children}</S.Wrapper>;
 }
 
 export default List;

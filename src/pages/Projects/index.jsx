@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card from '@/components/Card';
 import List from '@/components/List';
 
-import { Wrapper, ProjectsListContainer } from './Projects.styled';
+import * as S from './Projects.styled';
 
 const data = [
   {
@@ -55,9 +55,9 @@ function Projects() {
   };
 
   return (
-    <Wrapper>
+    <S.Wrapper>
       <Card data={data} currentId={currentProjectId} setCurrentId={setCurrentProjectId} />
-      <ProjectsListContainer>
+      <S.ProjectsListContainer>
         <h2>projects list</h2>
         <List>
           {data.map(item => (
@@ -73,8 +73,8 @@ function Projects() {
             </li>
           ))}
         </List>
-      </ProjectsListContainer>
-    </Wrapper>
+      </S.ProjectsListContainer>
+    </S.Wrapper>
   );
 }
 

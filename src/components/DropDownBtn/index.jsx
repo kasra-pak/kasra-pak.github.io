@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ReactComponent as ChevronDown } from '@/assets/images/chevron.svg';
 
-import { Btn } from './DropDownBtn.styled';
+import * as S from './DropDownBtn.styled';
 
 function DropDownBtn({ isOpen, toggle }) {
   // const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +9,9 @@ function DropDownBtn({ isOpen, toggle }) {
   // const toggle = () => setIsOpen(prevState => !prevState);
 
   return (
-    <Btn className={isOpen ? 'open' : ''} onClick={toggle}>
+    <S.Btn className={isOpen ? 'open' : ''} onClick={toggle}>
       <ChevronDown />
-    </Btn>
+    </S.Btn>
   );
 }
 

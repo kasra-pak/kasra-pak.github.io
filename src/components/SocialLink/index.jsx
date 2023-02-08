@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Wrapper } from './SocialLink.styled';
+import * as S from './SocialLink.styled';
 
 function SocialLink({ href, target, rel, children }) {
   return (
-    <Wrapper>
+    <S.Wrapper>
       <a href={href} target={target} rel={rel}>
         {children}
       </a>
-    </Wrapper>
+    </S.Wrapper>
   );
 }
 

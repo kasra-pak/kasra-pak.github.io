@@ -6,7 +6,6 @@ Designed and Developed by Me
 
 **TODOs:**
 
-- [ ] Styled-components (import \* as S).
 - [ ] Dark Theme.
 - [ ] Add some blog posts.
 - [ ] Left side background Image loads slowly on first visit.

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Wrapper } from './FadeScroll.styled';
+import * as S from './FadeScroll.styled';
 
 function FadeScroll({ children }) {
   const [fadeStatus, setFadeStatus] = useState(null);
@@ -30,7 +30,7 @@ function FadeScroll({ children }) {
     }
   };
 
-  return <Wrapper fade={fadeStatus}>{children}</Wrapper>;
+  return <S.Wrapper fade={fadeStatus}>{children}</S.Wrapper>;
 }
 
 export default FadeScroll;
