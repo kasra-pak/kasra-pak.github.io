@@ -1,14 +1,13 @@
 import React from 'react';
 import { ReactComponent as EmailLogo } from '@/assets/images/email.svg';
-import { Wrapper, EmailAddress } from './Email.styled';
+import { EmailAddress } from './Email.styled';
 
-function Email() {
-  const emailAddress = 'kasrapak69@gmail.com';
+function Email({ children }) {
   return (
-    <Wrapper href={`mailto:${emailAddress}`}>
-      <EmailAddress>{emailAddress}</EmailAddress>
+    <>
+      <EmailAddress>{children}</EmailAddress>
       <EmailLogo />
-    </Wrapper>
+    </>
   );
 }
 

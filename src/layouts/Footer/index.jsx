@@ -1,5 +1,6 @@
 import React from 'react';
 import Email from '@/components/Email';
+import SocialLink from '@/components/SocialLink';
 
 import { ReactComponent as GithubLogo } from '@/assets/images/github.svg';
 import { ReactComponent as LinkedinLogo } from '@/assets/images/linkedin.svg';
@@ -12,29 +13,29 @@ function Footer() {
   return (
     <footer>
       <SocialLinks>
-        <li>
-          <Email />
-        </li>
-        <li>
-          <a href="https://github.com/kasra-pak" target="_blank" rel="noreferrer">
-            <GithubLogo />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/kasra-pak" target="_blank" rel="noreferrer">
-            <LinkedinLogo />
-          </a>
-        </li>
-        <li>
-          <a href="https://t.me/kasra_pak" target="_blank" rel="noreferrer">
-            <TelegramLogo />
-          </a>
-        </li>
         {/* <li>
-          <a href="" target="_blank" rel="noreferrer">
-            <WhatsAppLogo />
-          </a>
+          <Email />
         </li> */}
+
+        <SocialLink href="mailto:kasrapak69@gmail.com">
+          <Email>kasrapak69@gmail.com</Email>
+        </SocialLink>
+
+        <SocialLink href="https://github.com/kasra-pak" target="_blank" rel="noreferrer">
+          <GithubLogo />
+        </SocialLink>
+
+        <SocialLink href="https://www.linkedin.com/in/kasra-pak" target="_blank" rel="noreferrer">
+          <LinkedinLogo />
+        </SocialLink>
+
+        <SocialLink href="https://t.me/kasra_pak" target="_blank" rel="noreferrer">
+          <TelegramLogo />
+        </SocialLink>
+
+        {/* <SocialLink href="" target="_blank" rel="noreferrer">
+          <WhatsAppLogo />
+        </SocialLink> */}
       </SocialLinks>
     </footer>
   );

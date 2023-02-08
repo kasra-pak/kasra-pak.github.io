@@ -1,23 +1,12 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.a`
-  padding: 0.25em;
-  cursor: pointer;
-`;
-
-const EmailAddress = styled.div`
+const EmailAddress = styled.span`
+  display: none;
   letter-spacing: 1.5px;
   font-weight: 600;
-  display: none;
-  cursor: pointer;
 
   & + svg {
-    transition: filter 0.2s ease;
     display: block;
-  }
-
-  & + svg path {
-    pointer-events: none;
   }
 
   @media screen and (min-width: 340px) {
@@ -29,4 +18,4 @@ const EmailAddress = styled.div`
   }
 `;
 
-export { Wrapper, EmailAddress };
+export { EmailAddress };
