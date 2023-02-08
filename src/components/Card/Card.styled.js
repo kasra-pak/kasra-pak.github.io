@@ -63,6 +63,11 @@ const DropDownContainer = styled.div`
           transform: scaleY(0);
           opacity: 0;
         `}
+
+  @media screen and (min-width: 1200px) {
+    transform: scaleY(0);
+    opacity: 0;
+  }
 `;
 
 const Content = styled.div`
@@ -76,6 +81,10 @@ const Content = styled.div`
   transition: opacity 0.2s ease;
 
   opacity: ${props => (props.isHidden ? '0' : '1')};
+
+  @media screen and (min-width: 1200px) {
+    opacity: 1;
+  }
 `;
 
 const Technologies = styled.ul`
