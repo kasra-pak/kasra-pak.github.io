@@ -100,4 +100,8 @@ const ListItem = styled.li`
   }
 `;
 
-export { Wrapper, Name, Navbar, List, ListItem };
+const ThemeToggler = styled.button1`
+  width: 100%;
+`;
+
+export { Wrapper, Name, Navbar, List, ListItem, ThemeToggler };

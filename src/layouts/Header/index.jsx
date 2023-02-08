@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import FadeScroll from '@/components/FadeScroll';
 import { ReactComponent as MoonLogo } from '@/assets/images/moon.svg';
 
-import { Wrapper, Name, Navbar, List, ListItem } from './Header.styled';
+import { Wrapper, Name, Navbar, List, ListItem, ThemeToggler } from './Header.styled';
 
 function Header() {
   const nodeRef = useRef(null);
@@ -29,9 +29,9 @@ function Header() {
               </NavLink>
             </ListItem>
             <ListItem className="moon">
-              <button>
+              <ThemeToggler>
                 <MoonLogo />
-              </button>
+              </ThemeToggler>
             </ListItem>
           </List>
         </FadeScroll>
