@@ -10,13 +10,13 @@ const Wrapper = styled.main`
 `;
 
 const Title = styled.h2`
-  font-family: var(--font-heading-1);
+  font-family: ${({ theme }) => theme.fonts.font2};
   font-size: clamp(2rem, 11vw, 3.15rem);
   font-weight: bold;
   font-style: italic;
 
   &::selection {
-    text-shadow: 2px 2px 0 hsl(var(--color-text));
+    text-shadow: 2px 2px 0 hsl(${({ theme }) => theme.colors.color2});
   }
 
   @media screen and (min-width: 650px) {

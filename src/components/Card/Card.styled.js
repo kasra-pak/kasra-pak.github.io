@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components';
 
 const Wrapper = styled.section`
   background: linear-gradient(
-    hsl(var(--color-light-gray) / 0.2) 0%,
+    hsl(${({ theme }) => theme.colors.color3} / 0.2) 0%,
     transparent 50%,
-    hsl(var(--color-light-gray) / 0.2) 100%
+    hsl(${({ theme }) => theme.colors.color3} / 0.2) 100%
   );
   border-radius: 0.5em;
   padding: 1em;
@@ -20,12 +20,12 @@ const Header = styled.div`
   justify-content: space-between;
   gap: 1em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid hsl(var(--color-text) / 0.1);
+  border-bottom: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
 `;
 
 const Title = styled.h2`
   text-transform: capitalize;
-  text-shadow: ${props => props.selectMode && '0 0 3px hsl(var(--color-brand) / 0.1)'};
+  text-shadow: ${({ theme, selectMode }) => selectMode && `0 0 3px hsl(${theme.colors.color1} / 0.1)`};
 
   @media screen and (min-width: 650px) {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -72,7 +72,7 @@ const DropDownContainer = styled.div`
 
 const Content = styled.div`
   min-height: 200px;
-  border-bottom: 1px solid hsl(var(--color-text) / 0.1);
+  border-bottom: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
   margin-bottom: 0.5em;
   padding: 1em 0;
   display: flex;
@@ -93,7 +93,7 @@ const Technologies = styled.ul`
   gap: 0.5em 1em;
 
   & > li {
-    color: hsla(var(--color-brand));
+    color: hsl(${({ theme }) => theme.colors.color1});
     text-transform: uppercase;
     border: 1px solid currentColor;
     border-radius: 0.5em;

@@ -16,13 +16,13 @@ const Wrapper = styled.div`
   }
 
   &::before {
-    background: linear-gradient(to right, hsl(var(--color-white)), transparent);
+    background: linear-gradient(to right, hsl(${({ theme }) => theme.colors.color5}), transparent);
     left: 0;
     opacity: ${props => (props.fade === 'fade-left' || props.fade === 'fade-both' ? '1' : '0')};
   }
 
   &::after {
-    background: linear-gradient(to left, hsl(var(--color-white)), transparent);
+    background: linear-gradient(to left, hsl(${({ theme }) => theme.colors.color5}), transparent);
     right: 0;
     opacity: ${props => (props.fade === 'fade-right' || props.fade === 'fade-both' ? '1' : '0')};
   }

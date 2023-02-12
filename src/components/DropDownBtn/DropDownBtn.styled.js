@@ -7,7 +7,7 @@ const Btn = styled.button`
 
   svg {
     width: 17px;
-    fill: hsl(var(--color-text));
+    fill: hsl(${({ theme }) => theme.colors.color2});
     flex-shrink: 0;
     pointer-events: none;
     transition: transform 0.2s ease;

@@ -1,26 +1,9 @@
 import { createGlobalStyle, css } from 'styled-components';
-import BackgroundImage from '@/assets/images/background.jpg';
+// import BackgroundImage from '@/assets/images/background.jpg';
 import CycloneImage from '@/assets/images/bg-cyclone.jpg';
 import CycloneImageHorizontal from '@/assets/images/bg-cyclone-horizontal.jpg';
 
 const GlobalStyle = createGlobalStyle`
-/* ================== */
-/* Custom Properties */
-/* ================ */
-:root {
-  --font-main: "Noto Sans", sans-serif;
-  --font-heading-1: "Cuprum", sans-serif;
-  --font-heading-2: "Oregano", cursive;
-
-  /* hsl values */
-  --color-brand: 212 100% 47%;
-  --color-text: 221 58% 9%;
-  --color-light-gray: 0 0% 87%;
-  --color-white: 0 0% 97%;
-
-  --shadow: 0 0 3px hsl(var(--color-text) / 0.2);
-}
-
 /* ======= */
 /* Resets */
 /* ===== */
@@ -71,14 +54,14 @@ a {
 /* Custom Styles */
 /* ============ */
 ::selection {
-  background-color: hsl(var(--color-brand) /.9);
-  color: hsl(var(--color-white));
+  background-color: hsl(${({ theme }) => theme.colors.color1} / .9);
+  color: hsl(${({ theme }) => theme.colors.color4});
   text-shadow: none;
 }
 
 body {
-  font-family: var(--font-main);
-  color: hsl(var(--color-text));
+  font-family: ${({ theme }) => theme.fonts.font1};
+  color: hsl(${({ theme }) => theme.colors.color2});
   overflow-x: hidden;
 
   ${props =>
@@ -91,7 +74,7 @@ body {
           }
         `
       : css`
-          background-image: url(${BackgroundImage});
+          background-image: url(${({ theme }) => theme.background});
           background-position: -40px;
 
           @media screen and (min-width: 568px) {

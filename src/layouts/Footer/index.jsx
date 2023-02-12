@@ -13,10 +13,6 @@ function Footer() {
   return (
     <footer>
       <S.SocialLinks>
-        {/* <li>
-          <Email />
-        </li> */}
-
         <SocialLink href="mailto:kasrapak69@gmail.com">
           <Email>kasrapak69@gmail.com</Email>
         </SocialLink>

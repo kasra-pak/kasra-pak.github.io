@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
+import { ThemeProvider, ThemeContext } from 'styled-components';
+
+import { lightTheme } from '@/assets/theme';
 import router from '@/routes';
 
 import GlobalStyle from '@/assets/Styles/globalStyles';
 
 function App() {
+  const [theme, setTheme] = useState(lightTheme);
+
   return (
-    <>
-      <GlobalStyle />
-      <RouterProvider router={router} />
-      {/* <Routes>
+    <ThemeContext.Provider value={{ setTheme }}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <RouterProvider router={router} />
+        {/* <Routes>
         <Route path="/" element={<Page />}>
           <Route index element={<Home />} />
           <Route path="projects" element={<Projects />} />
@@ -23,9 +29,10 @@ function App() {
               <NotFound />
             </>
           }
-        />
-      </Routes> */}
-    </>
+          />
+        </Routes> */}
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
 }
 

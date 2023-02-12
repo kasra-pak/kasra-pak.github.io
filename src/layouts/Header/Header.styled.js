@@ -10,12 +10,12 @@ const Wrapper = styled.header`
 `;
 
 const Name = styled.h1`
-  font-family: var(--font-heading-2);
+  font-family: ${({ theme }) => theme.fonts.font3};
   font-size: 1.5rem;
-  color: hsl(var(--color-brand));
+  color: hsl(${({ theme }) => theme.colors.color1});
   text-transform: capitalize;
   letter-spacing: 0.5px;
-  text-shadow: 0 0 3px hsl(var(--color-brand) / 0.1);
+  text-shadow: 0 0 3px hsl(${({ theme }) => theme.colors.color1} / 0.1);
   transition: opacity 1s ease;
 
   @media screen and (min-width: 650px) {
@@ -26,7 +26,7 @@ const Name = styled.h1`
 
 const Navbar = styled.nav`
   margin-top: 0.25em;
-  border-top: 1px solid hsl(var(--color-text) / 0.1);
+  border-top: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
 
   @media screen and (min-width: 650px) {
     border: none;
@@ -58,8 +58,8 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  color: hsl(var(--color-text));
-  fill: hsl(var(--color-text));
+  color: hsl(${({ theme }) => theme.colors.color2});
+  fill: hsl(${({ theme }) => theme.colors.color2});
   transition: fill 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
   cursor: pointer;
 
@@ -68,14 +68,14 @@ const ListItem = styled.li`
   }
 
   &:hover {
-    color: hsl(var(--color-text));
-    fill: hsl(var(--color-text));
-    text-shadow: var(--shadow);
+    color: hsl(${({ theme }) => theme.colors.color2});
+    fill: hsl(${({ theme }) => theme.colors.color2});
+    text-shadow: ${({ theme }) => theme.shadows.shadow1};
   }
 
   a.active {
-    color: hsl(var(--color-brand));
-    text-shadow: 0 0 3px hsl(var(--color-brand) / 0.1);
+    color: hsl(${({ theme }) => theme.colors.color1});
+    text-shadow: 0 0 3px hsl(${({ theme }) => theme.colors.color1} / 0.1);
   }
 
   &:hover svg {
@@ -83,7 +83,7 @@ const ListItem = styled.li`
   }
 
   &:hover svg {
-    filter: drop-shadow(var(--shadow));
+    filter: drop-shadow(${({ theme }) => theme.shadows.shadow1});
   }
 
   &.moon {

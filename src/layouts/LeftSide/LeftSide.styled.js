@@ -10,9 +10,17 @@ const Wrapper = styled.aside`
   max-width: 240px;
   flex-shrink: 0;
   display: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: hsl(${({ theme }) => theme.colors.color6});
+  }
 
   .logo {
-    fill: hsl(var(--color-white));
+    fill: hsl(${({ theme }) => theme.colors.color4});
     width: clamp(35px, 5vw, 50px);
     margin: clamp(1.85rem, 4vw, 3.5rem) auto;
     cursor: help;

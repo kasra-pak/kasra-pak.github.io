@@ -12,7 +12,7 @@ const Wrapper = styled.main`
 `;
 
 const ProjectsListContainer = styled.section`
-  background: linear-gradient(to bottom, hsl(var(--color-light-gray) / 0.2), transparent);
+  background: linear-gradient(to bottom, hsl(${({ theme }) => theme.colors.color3} / 0.2), transparent);
   border-radius: 0.5em;
   padding: 1em;
   display: none;
@@ -24,7 +24,7 @@ const ProjectsListContainer = styled.section`
     text-transform: capitalize;
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
-    border-bottom: 1px solid hsl(var(--color-text) / 0.1);
+    border-bottom: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
   }
 
   @media screen and (min-width: 1200px) {

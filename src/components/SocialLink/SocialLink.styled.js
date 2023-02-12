@@ -5,7 +5,7 @@ const Wrapper = styled.li`
   transition: text-shadow 0.2s ease;
 
   &:hover {
-    text-shadow: var(--shadow);
+    text-shadow: ${({ theme }) => theme.shadows.shadow1};
   }
 
   a {
@@ -18,7 +18,7 @@ const Wrapper = styled.li`
   }
 
   &:hover svg {
-    filter: drop-shadow(var(--shadow));
+    filter: drop-shadow(${({ theme }) => theme.shadows.shadow1});
   }
 
   @media screen and (min-width: 650px) {

@@ -6,22 +6,22 @@ const Wrapper = styled.ul`
   gap: 1em;
 
   & > li {
-    background-color: hsl(var(--color-white));
+    background-color: hsl(${({ theme }) => theme.colors.color4});
     text-transform: capitalize;
     padding: 0.5em;
     border-radius: 0.25em;
-    box-shadow: 0 2px 6px hsl(var(--color-text) / 0.1);
+    box-shadow: ${({ theme }) => theme.shadows.shadow2};
     transition: box-shadow 0.2s ease, color 0.2s ease;
     cursor: pointer;
   }
 
   & > li:hover {
-    box-shadow: 0 2px 6px hsl(var(--color-text) / 0.2);
+    box-shadow: ${({ theme }) => theme.shadows.shadow3};
   }
 
   & > li.active {
-    box-shadow: 0 2px 6px hsl(var(--color-brand) / 0.2);
-    color: hsl(var(--color-brand));
+    box-shadow: ${({ theme }) => theme.shadows.shadow4};
+    color: hsl(${({ theme }) => theme.colors.color1});
   }
 
   @media screen and (min-width: 650px) {

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.main`
-  color: hsl(var(--color-white));
+  color: hsl(${({ theme }) => theme.colors.color4});
   height: 100vh;
 `;
 
 const Overlay = styled.div`
-  background-color: hsl(var(--color-text) / 0.6);
+  background-color: hsl(${({ theme }) => theme.colors.color2} / 0.6);
   height: inherit;
 `;
 
@@ -28,13 +28,13 @@ const Status = styled.div`
     flex-shrink: 0;
     margin-right: clamp(-10px, -1vw, -4px);
 
-    fill: hsl(var(--color-white));
+    fill: hsl(${({ theme }) => theme.colors.color4});
     width: clamp(30px, 15vw, 100px);
   }
 `;
 
 const Title = styled.h1`
-  font-family: var(--font-heading-1);
+  font-family: ${({ theme }) => theme.fonts.font2};
   font-size: clamp(2rem, 11vw, 3.15rem);
   font-weight: bold;
   font-style: italic;

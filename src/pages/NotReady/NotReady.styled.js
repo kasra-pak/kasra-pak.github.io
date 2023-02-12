@@ -10,7 +10,7 @@ const Wrapper = styled.main`
 `;
 
 const Title = styled.h2`
-  font-family: var(--font-heading-1);
+  font-family: ${({ theme }) => theme.fonts.font2};
   font-size: clamp(2rem, 11vw, 3.15rem);
   font-weight: bold;
   font-style: italic;
