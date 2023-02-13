@@ -1,5 +1,28 @@
 import styled, { css } from 'styled-components';
 
+const fade = css`
+  &.fade-enter {
+    opacity: 0;
+  }
+
+  &.fade-exit {
+    opacity: 1;
+  }
+
+  &.fade-enter-active {
+    opacity: 1;
+  }
+
+  &.fade-exit-active {
+    opacity: 0;
+  }
+
+  &.fade-enter-active,
+  &.fade-exit-active {
+    transition: opacity 200ms;
+  }
+`;
+
 const Wrapper = styled.section`
   background: linear-gradient(
     hsl(${({ theme }) => theme.colors.color3} / 0.2) 0%,
@@ -33,6 +56,8 @@ const Title = styled.h2`
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     /* font-size: 4rem; */
   }
+
+  ${fade}
 `;
 
 const Container = styled.div`
@@ -74,19 +99,20 @@ const DropDownContainer = styled.div`
 
 const Content = styled.div`
   min-height: 200px;
-  border-bottom: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
   margin-bottom: 0.5em;
   padding: 1em 0;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  transition: ${({ theme }) => theme.addTransitionOn(['border-color', 'opacity'])};
+  transition: ${({ theme }) => theme.addTransitionOn(['opacity'])};
 
   opacity: ${props => (props.isHidden ? '0' : '1')};
 
   @media screen and (min-width: 1200px) {
     opacity: 1;
   }
+
+  ${fade}
 `;
 
 const Technologies = styled.ul`
@@ -145,9 +171,15 @@ const Footer = styled.div`
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
-  transition: opacity 0.2s ease;
+  border-top: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
+  padding-top: 1em;
+  transition: ${({ theme }) => theme.addTransitionOn(['opacity', 'border-color'])};
 
   opacity: ${props => (props.isHidden ? '0' : '1')};
+
+  & > a {
+    ${fade}
+  }
 `;
 
 export { Wrapper, Header, Title, Container, DropDownContainer, Content, Technologies, Description, Features, Footer };

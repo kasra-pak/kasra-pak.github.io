@@ -7,6 +7,7 @@ Designed and Developed by Me
 **TODOs:**
 
 - [ ] Project Card content changes instantly (add smooth transition).
+- [ ] Refactor Project Card component.
 - [ ] Left side hover logo blue; bg light white; bg dark black;
 - [ ] Add some blog posts.
 - [ ] Left side background Image loads slowly on first visit.
