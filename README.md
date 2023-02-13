@@ -6,7 +6,7 @@ Designed and Developed by Me
 
 **TODOs:**
 
-- [ ] Project Card content changes instantly (add smooth transition).
+- [ ] Improve technologies design in project card.
 - [ ] Refactor Project Card component.
 - [ ] Left side hover logo blue; bg light white; bg dark black;
 - [ ] Add some blog posts.
