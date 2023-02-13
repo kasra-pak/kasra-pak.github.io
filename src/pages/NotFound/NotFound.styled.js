@@ -3,11 +3,13 @@ import styled from 'styled-components';
 const Wrapper = styled.main`
   color: hsl(${({ theme }) => theme.colors.color4});
   height: 100vh;
+  transition: ${({ theme }) => theme.addTransitionOn(['color'])};
 `;
 
 const Overlay = styled.div`
   background-color: hsl(${({ theme }) => theme.colors.color2} / 0.6);
   height: inherit;
+  transition: ${({ theme }) => theme.addTransitionOn(['background-color'])};
 `;
 
 const Content = styled.div`
@@ -30,6 +32,7 @@ const Status = styled.div`
 
     fill: hsl(${({ theme }) => theme.colors.color4});
     width: clamp(30px, 15vw, 100px);
+    transition: ${({ theme }) => theme.addTransitionOn(['fill'])};
   }
 `;
 

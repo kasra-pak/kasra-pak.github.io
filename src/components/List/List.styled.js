@@ -11,7 +11,7 @@ const Wrapper = styled.ul`
     padding: 0.5em;
     border-radius: 0.25em;
     box-shadow: ${({ theme }) => theme.shadows.shadow2};
-    transition: box-shadow 0.2s ease, color 0.2s ease;
+    transition: ${({ theme }) => theme.addTransitionOn(['box-shadow', 'color'])};
     cursor: pointer;
   }
 

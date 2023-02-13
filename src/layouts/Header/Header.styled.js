@@ -16,7 +16,7 @@ const Name = styled.h1`
   text-transform: capitalize;
   letter-spacing: 0.5px;
   text-shadow: 0 0 3px hsl(${({ theme }) => theme.colors.color1} / 0.1);
-  transition: opacity 1s ease;
+  transition: ${({ theme }) => theme.addTransitionOn(['color', 'text-shadow'])};
 
   @media screen and (min-width: 650px) {
     font-size: clamp(1.5rem, 3vw, 2.25rem);
@@ -27,6 +27,7 @@ const Name = styled.h1`
 const Navbar = styled.nav`
   margin-top: 0.25em;
   border-top: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
+  transition: ${({ theme }) => theme.addTransitionOn(['border-color'])};
 
   @media screen and (min-width: 650px) {
     border: none;
@@ -60,7 +61,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   color: hsl(${({ theme }) => theme.colors.color2});
   fill: hsl(${({ theme }) => theme.colors.color2});
-  transition: fill 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+  transition: ${({ theme }) => theme.addTransitionOn(['fill', 'color', 'text-shadow'])};
   cursor: pointer;
 
   a {

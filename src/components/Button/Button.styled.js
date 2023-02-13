@@ -77,6 +77,8 @@ const Btn = styled.button`
   @media screen and (min-width: 650px) {
     font-size: clamp(1rem, 2vw, 1.25rem);
   }
+
+  transition: ${({ theme }) => theme.addTransitionOn(['color', 'background-color', 'border-color', 'box-shadow'])};
 `;
 
 export { Btn };

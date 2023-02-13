@@ -21,11 +21,13 @@ const Header = styled.div`
   gap: 1em;
   padding-bottom: 0.5em;
   border-bottom: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
+  transition: ${({ theme }) => theme.addTransitionOn(['border-color'])};
 `;
 
 const Title = styled.h2`
   text-transform: capitalize;
   text-shadow: ${({ theme, selectMode }) => selectMode && `0 0 3px hsl(${theme.colors.color1} / 0.1)`};
+  transition: ${({ theme }) => theme.addTransitionOn(['text-shadow'])};
 
   @media screen and (min-width: 650px) {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -78,7 +80,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1em;
-  transition: opacity 0.2s ease;
+  transition: ${({ theme }) => theme.addTransitionOn(['border-color', 'opacity'])};
 
   opacity: ${props => (props.isHidden ? '0' : '1')};
 
@@ -99,6 +101,7 @@ const Technologies = styled.ul`
     border-radius: 0.5em;
     padding: 0.25em 0.75em;
     opacity: 0.6;
+    transition: ${({ theme }) => theme.addTransitionOn(['color'])};
   }
 
   @media screen and (min-width: 650px) {

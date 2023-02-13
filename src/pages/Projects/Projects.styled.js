@@ -25,6 +25,7 @@ const ProjectsListContainer = styled.section`
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
     border-bottom: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
+    transition: ${({ theme }) => theme.addTransitionOn(['border-color'])};
   }
 
   @media screen and (min-width: 1200px) {

@@ -84,7 +84,7 @@ body {
 
   background-repeat: no-repeat;
   background-size: cover;
-
+  transition: ${({ theme }) => theme.addTransitionOn(['background', 'color'])};
 }
 `;
 

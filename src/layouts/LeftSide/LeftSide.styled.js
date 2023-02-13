@@ -17,6 +17,7 @@ const Wrapper = styled.aside`
     position: absolute;
     inset: 0;
     background-color: hsl(${({ theme }) => theme.colors.color6});
+    transition: ${({ theme }) => theme.addTransitionOn(['background-color'])};
   }
 
   .logo {
@@ -24,6 +25,7 @@ const Wrapper = styled.aside`
     width: clamp(35px, 5vw, 50px);
     margin: clamp(1.85rem, 4vw, 3.5rem) auto;
     cursor: help;
+    transition: ${({ theme }) => theme.addTransitionOn(['fill'])};
   }
 
   @media screen and (min-width: 568px) {

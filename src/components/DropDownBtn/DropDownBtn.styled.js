@@ -11,6 +11,7 @@ const Btn = styled.button`
     flex-shrink: 0;
     pointer-events: none;
     transition: transform 0.2s ease;
+    transition: ${({ theme }) => theme.addTransitionOn(['fill'])};
   }
 
   @media screen and (min-width: 1200px) {

@@ -7,10 +7,13 @@ const fonts = {
   font3: '"Oregano", cursive',
 };
 
+const addTransitionOn = arrayOfProperties => arrayOfProperties.map(arg => `${arg} .2s ease`).join(', ');
+
 const lightTheme = {
   name: 'light',
   fonts,
   background: lightBG,
+  addTransitionOn,
   shadows: {
     shadow1: '0 0 3px hsl(221 58% 9% / 0.2)',
     shadow2: '0 2px 6px hsl(221 58% 9% / 0.1)',
@@ -31,6 +34,7 @@ const darkTheme = {
   name: 'dark',
   fonts,
   background: darkBG,
+  addTransitionOn,
   shadows: {
     shadow1: '0 0 3px hsl(216 100% 98% / 0.2)',
     shadow2: '0 2px 6px hsl(221 0% 0% / 0.4)',
