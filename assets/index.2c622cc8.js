@@ -304,7 +304,7 @@ Error generating stack: `+i.message+`
   display: flex;
   // 687px is the largest height among all pages (Home, blog, projects, etc.)
   // This prevents background images from jumping during the page change
-  min-height: 728px;
+  min-height: 760px;
 `,fg=G.div`
   display: flex;
   flex-direction: column;
@@ -762,7 +762,9 @@ a {
 body {
   font-family: ${({theme:e})=>e.fonts.font1};
   color: hsl(${({theme:e})=>e.colors.color2});
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  overflow: hidden scroll;
+
 
   ${e=>e.notFound?vt`
           background: url(${qg});
