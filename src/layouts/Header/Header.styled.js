@@ -10,6 +10,7 @@ const Wrapper = styled.header`
 `;
 
 const Name = styled.h1`
+  display: inline-block;
   font-family: ${({ theme }) => theme.fonts.font3};
   font-size: 1.5rem;
   color: hsl(${({ theme }) => theme.colors.color1});
@@ -31,7 +32,7 @@ const Navbar = styled.nav`
 
   @media screen and (min-width: 650px) {
     border: none;
-    max-width: 500px;
+    max-width: 250px;
     flex-basis: 35%;
   }
 `;
@@ -102,6 +103,7 @@ const ListItem = styled.li`
 `;
 
 const ThemeToggler = styled.button`
+  display: block;
   width: 100%;
 `;
 
