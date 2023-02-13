@@ -62,7 +62,9 @@ a {
 body {
   font-family: ${({ theme }) => theme.fonts.font1};
   color: hsl(${({ theme }) => theme.colors.color2});
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  overflow: hidden scroll;
+
 
   ${props =>
     props.notFound

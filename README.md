@@ -6,7 +6,7 @@ Designed and Developed by Me
 
 **TODOs:**
 
-- [ ] Dark Theme.
+- [ ] Project Card content changes instantly (add smooth transition).
 - [ ] Left side hover logo blue; bg light white; bg dark black;
 - [ ] Add some blog posts.
 - [ ] Left side background Image loads slowly on first visit.
