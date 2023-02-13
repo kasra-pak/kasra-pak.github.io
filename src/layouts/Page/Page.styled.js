@@ -4,7 +4,7 @@ const Wrapper = styled.div`
   display: flex;
   // 687px is the largest height among all pages (Home, blog, projects, etc.)
   // This prevents background images from jumping during the page change
-  min-height: 687px;
+  min-height: 728px;
 `;
 
 const Content = styled.div`
