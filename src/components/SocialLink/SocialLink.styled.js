@@ -15,6 +15,8 @@ const Wrapper = styled.li`
   svg {
     width: 16px;
     transition: filter 0.2s ease;
+    fill: hsl(${({ theme }) => theme.colors.color2});
+    transition: ${({ theme }) => theme.addTransitionOn(['fill', 'filter'])};
   }
 
   &:hover svg {
