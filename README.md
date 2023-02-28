@@ -6,6 +6,8 @@ Designed and Developed by Me
 
 **TODOs:**
 
+- [ ] Projects list items theme toggle.
+- [ ] Persist selected project between page changes.
 - [ ] Improve technologies design in project card.
 - [ ] Refactor Project Card component.
 - [ ] Left side hover logo blue; bg light white; bg dark black;
