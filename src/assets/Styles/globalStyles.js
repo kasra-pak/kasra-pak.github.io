@@ -76,11 +76,6 @@ body {
         `
       : css`
           background-image: url(${({ theme }) => theme.background});
-          background-position: -40px;
-
-          @media screen and (min-width: 568px) {
-            background-position: 7vw;
-          }
         `}
 
   background-repeat: no-repeat;
