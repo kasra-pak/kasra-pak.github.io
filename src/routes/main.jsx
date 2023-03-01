@@ -3,12 +3,12 @@ import React, { createRef } from 'react';
 import Page from '@/layouts/Page';
 import Home from '@/pages/Home';
 import Projects from '@/pages/Projects';
-import NotReady from '@/pages/NotReady';
+import Blog from '@/pages/Blog';
 
 const routes = [
   { path: '/', element: <Home />, nodeRef: createRef() },
   { path: '/projects', element: <Projects />, nodeRef: createRef() },
-  { path: '/blog', element: <NotReady />, nodeRef: createRef() },
+  { path: '/blog', element: <Blog />, nodeRef: createRef() },
 ];
 
 const main = {

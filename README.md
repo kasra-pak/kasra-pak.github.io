@@ -16,4 +16,5 @@ Designed and Developed by Me
 - [ ] On projects page the Left side becomes a link to the active project screenshots.
 - [ ] Cyclone hover effect.
 - [ ] Migrate to Typescript.
-- [ ] Test with Jest & Cypress
+- [ ] Test with Jest & Cypress.
+- [ ] Optimize loading time.
