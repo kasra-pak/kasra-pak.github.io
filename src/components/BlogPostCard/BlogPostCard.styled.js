@@ -43,6 +43,7 @@ const Content = styled.p`
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  flex-grow: 1;
 
   @media screen and (min-width: 568px) {
     display: -webkit-box;
