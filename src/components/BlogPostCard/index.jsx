@@ -18,6 +18,8 @@ const BlogPostCard = ({ post }) => {
         </S.ShareBtn>
       </S.Header>
       <S.Title>{post.title}</S.Title>
+      <S.Content>{post.content}</S.Content>
+      <S.Divider />
       <S.Footer>
         <S.Date>{post.date}</S.Date>
         <S.Duration>{post.duration} min read</S.Duration>
