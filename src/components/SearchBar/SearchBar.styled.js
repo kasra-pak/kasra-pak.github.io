@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   position: relative;
+  margin-block-end: 1em;
   border: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.2);
   border-radius: 0.25em;
   transition: ${({ theme }) => theme.addTransitionOn(['background-color', 'border-color'])};
