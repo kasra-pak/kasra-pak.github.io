@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "title": "example something",
+    "duration": 10,
+    "date": "march 01, 2021",
+    "topics": ["react", "frontend"],
+    "content": "find a way to save the whole blog post content",
+    "url": "figure this out"
+  },
+  {
+    "id": "2",
+    "title": "i know that i know nothing",
+    "duration": 16,
+    "date": "october 19, 2020",
+    "topics": ["life", "philosophy"],
+    "content": "find a way to save the whole blog post content",
+    "url": "figure this out"
+  },
+  {
+    "id": "3",
+    "title": "CSS variables",
+    "duration": 6,
+    "date": "january 21, 2018",
+    "topics": ["frontend", "css"],
+    "content": "find a way to save the whole blog post content",
+    "url": "figure this out"
+  }
+]
