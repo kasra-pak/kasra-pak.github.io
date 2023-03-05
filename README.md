@@ -7,6 +7,8 @@ Designed and Developed by Me
 **TODOs:**
 
 - [ ] Check the dark theme on new pages (blog).
+- [ ] Activate Share btn on blog posts.
+- [ ] Refactor the blur BG style into a single reusable variable.
 - [ ] Resume button functionality.
 - [ ] Blur mirror background (for cards, sections, etc.)
 - [ ] Header, leftSide and Footer stay fixed all the time; The Main and rightSide sections scroll; Blur the background for Footer so the overflowed content goes beneath it.
