@@ -6,6 +6,10 @@ Designed and Developed by Me
 
 **TODOs:**
 
+- [ ] Check the dark theme on new pages (blog).
+- [ ] Resume button functionality.
+- [ ] Blur mirror background (for cards, sections, etc.)
+- [ ] Header, leftSide and Footer stay fixed all the time; The Main and rightSide sections scroll; Blur the background for Footer so the overflowed content goes beneath it.
 - [ ] Projects list items theme toggle.
 - [ ] Persist selected project between page changes.
 - [ ] Improve technologies design in project card.
