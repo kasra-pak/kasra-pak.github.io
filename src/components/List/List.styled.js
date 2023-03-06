@@ -6,6 +6,7 @@ const Wrapper = styled.ul`
   gap: 1em;
 
   & > li {
+    font-size: clamp(0.9rem, 3.75vw, 1rem);
     background-color: hsl(${({ theme }) => theme.colors.color4});
     text-transform: capitalize;
     padding: 0.5em;

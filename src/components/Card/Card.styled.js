@@ -48,13 +48,13 @@ const Header = styled.div`
 `;
 
 const Title = styled.h2`
+  font-size: clamp(1.35rem, 6vw, 1.5rem);
   text-transform: capitalize;
   text-shadow: ${({ theme, selectMode }) => selectMode && `0 0 3px hsl(${theme.colors.color1} / 0.1)`};
   transition: ${({ theme }) => theme.addTransitionOn(['text-shadow'])};
 
   @media screen and (min-width: 650px) {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
-    /* font-size: 4rem; */
   }
 
   ${fade}
@@ -98,6 +98,7 @@ const DropDownContainer = styled.div`
 `;
 
 const Content = styled.div`
+  font-size: clamp(0.9rem, 3.75vw, 1rem);
   min-height: 200px;
   margin-bottom: 0.5em;
   padding: 1em 0;
@@ -116,16 +117,17 @@ const Content = styled.div`
 `;
 
 const Technologies = styled.ul`
+  font-size: clamp(0.9rem, 3.75vw, 1rem);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em 1em;
+  gap: 0.5em;
 
   & > li {
     color: hsl(${({ theme }) => theme.colors.color1});
-    text-transform: uppercase;
+    text-transform: capitalize;
     border: 1px solid currentColor;
     border-radius: 0.5em;
-    padding: 0.25em 0.75em;
+    padding: 0.1em 0.5em;
     opacity: 0.6;
     transition: ${({ theme }) => theme.addTransitionOn(['color'])};
   }
