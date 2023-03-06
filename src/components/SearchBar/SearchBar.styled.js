@@ -11,6 +11,10 @@ const Wrapper = styled.div`
     background-color: hsl(${({ theme }) => theme.colors.color2} / 0.03);
     border: 1px solid hsl(${({ theme }) => theme.colors.color2});
   }
+
+  @media screen and (min-width: 650px) {
+    max-width: 500px;
+  }
 `;
 
 const SearchBtn = styled.button`
