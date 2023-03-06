@@ -19,6 +19,10 @@ const Footer = styled.div`
   font-size: 0.85rem;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (min-width: 650px) {
+    font-size: clamp(0.85rem, 1.75vw, 1.05rem);
+  }
 `;
 
 const Divider = styled.span`
@@ -27,14 +31,18 @@ const Divider = styled.span`
   height: 1px;
   border-radius: 1px;
 
-  @media screen and (min-width: 568px) {
+  @media screen and (min-width: 500px) {
     display: block;
   }
 `;
 
 const Title = styled.h2`
-  font-size: 1.15rem;
+  font-size: clamp(1.15rem, 5vw, 1.25rem);
   text-transform: capitalize;
+
+  @media screen and (min-width: 650px) {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  }
 `;
 
 const Content = styled.p`
@@ -45,8 +53,12 @@ const Content = styled.p`
   -webkit-line-clamp: 2;
   flex-grow: 1;
 
-  @media screen and (min-width: 568px) {
+  @media screen and (min-width: 500px) {
     display: -webkit-box;
+  }
+
+  @media screen and (min-width: 650px) {
+    font-size: clamp(1rem, 2vw, 1.25rem);
   }
 `;
 
@@ -56,6 +68,10 @@ const Topics = styled.ul`
   text-transform: capitalize;
   display: flex;
   gap: 1em;
+
+  @media screen and (min-width: 650px) {
+    font-size: clamp(0.9rem, 1.9vw, 1.15rem);
+  }
 `;
 
 const ShareBtn = styled.button`

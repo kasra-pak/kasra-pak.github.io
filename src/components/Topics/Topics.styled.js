@@ -12,14 +12,18 @@ const Wrapper = styled.ul`
 `;
 
 const Item = styled.button`
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 3.75vw, 1rem);
   background-color: ${({ theme, active }) => (active ? `hsl(${theme.colors.color1})` : 'transparent')};
   color: hsl(${({ theme, active }) => (active ? theme.colors.color2 : theme.colors.color1)});
-  text-transform: uppercase;
+  text-transform: capitalize;
   border: 1px solid ${({ active }) => (active ? 'transparent' : 'currentColor')};
   border-radius: 0.5em;
-  padding: 0.2em 0.5em;
+  padding: 0.1em 0.5em;
   transition: ${({ theme }) => theme.addTransitionOn(['color', 'background-color'])};
+
+  @media screen and (min-width: 650px) {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
 `;
 
 export { Wrapper, Item };
