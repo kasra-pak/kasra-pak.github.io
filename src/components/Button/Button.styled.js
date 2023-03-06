@@ -56,6 +56,7 @@ const elevated = css`
 const Btn = styled.button`
   --bg-color: ${({ theme }) => theme.colors.color2};
   --fg-color: ${({ theme }) => theme.colors.color2};
+  font-size: clamp(0.9rem, 4vw, 1rem);
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 0.5px;

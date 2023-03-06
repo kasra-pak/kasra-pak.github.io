@@ -12,15 +12,15 @@ const Wrapper = styled.header`
 const Name = styled.h1`
   display: inline-block;
   font-family: ${({ theme }) => theme.fonts.font3};
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 6.25vw, 1.75rem);
   color: hsl(${({ theme }) => theme.colors.color1});
   text-transform: capitalize;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.75px;
   text-shadow: 0 0 3px hsl(${({ theme }) => theme.colors.color1} / 0.1);
   transition: ${({ theme }) => theme.addTransitionOn(['color', 'text-shadow'])};
 
-  @media screen and (min-width: 650px) {
-    font-size: clamp(1.5rem, 3vw, 2.25rem);
+  @media screen and (min-width: 568px) {
+    font-size: clamp(1.75rem, 4.25vw, 2.65rem);
     letter-spacing: 1px;
   }
 `;
@@ -38,6 +38,8 @@ const Navbar = styled.nav`
 `;
 
 const List = styled.ul`
+  font-size: clamp(0.9rem, 4vw, 1.15rem);
+  letter-spacing: 0.5px;
   text-transform: capitalize;
   font-weight: 600;
   width: 100%;
@@ -53,9 +55,8 @@ const List = styled.ul`
     display: none;
   }
 
-  @media screen and (min-width: 650px) {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    letter-spacing: 0.5px;
+  @media screen and (min-width: 568px) {
+    font-size: clamp(1.15rem, 2vw, 1.3rem);
   }
 `;
 

@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.main`
-  flex-grow: 1;
-
   @media screen and (min-width: 1200px) {
     display: flex;
     gap: 5em;
@@ -11,7 +9,7 @@ const Wrapper = styled.main`
 
 const Title = styled.h2`
   font-family: ${({ theme }) => theme.fonts.font2};
-  font-size: clamp(2rem, 11vw, 3.15rem);
+  font-size: clamp(2.25rem, 11vw, 3.2rem);
   font-weight: bold;
   font-style: italic;
 
@@ -20,8 +18,7 @@ const Title = styled.h2`
   }
 
   @media screen and (min-width: 650px) {
-    font-size: clamp(3.15rem, 6vw, 6rem);
-    /* font-size: 4rem; */
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
   }
 `;
 
@@ -29,6 +26,7 @@ const Subtitle = styled.p`
   text-align: justify;
   margin-top: 0.5em;
   margin-bottom: 1.5em;
+  font-size: clamp(0.9rem, 3.75vw, 1rem);
 
   @media screen and (min-width: 340px) {
     line-height: 1.5em;
