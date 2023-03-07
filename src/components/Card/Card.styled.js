@@ -182,6 +182,10 @@ const Footer = styled.div`
   & > a {
     ${fade}
   }
+
+  @media screen and (min-width: 1200px) {
+    opacity: 1;
+  }
 `;
 
 export { Wrapper, Header, Title, Container, DropDownContainer, Content, Technologies, Description, Features, Footer };
