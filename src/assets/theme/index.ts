@@ -1,3 +1,5 @@
+import { DefaultTheme } from 'styled-components';
+
 import lightBG from '@/assets/images/waves-bg-light.svg';
 import darkBG from '@/assets/images/waves-bg-dark.svg';
 
@@ -7,9 +9,9 @@ const fonts = {
   font3: '"Oregano", cursive',
 };
 
-const addTransitionOn = arrayOfProperties => arrayOfProperties.map(arg => `${arg} .2s ease`).join(', ');
+const addTransitionOn = (arrayOfProperties: string[]) => arrayOfProperties.map(arg => `${arg} .2s ease`).join(', ');
 
-const lightTheme = {
+const lightTheme: DefaultTheme = {
   name: 'light',
   fonts,
   background: lightBG,
@@ -30,7 +32,7 @@ const lightTheme = {
   },
 };
 
-const darkTheme = {
+const darkTheme: DefaultTheme = {
   name: 'dark',
   fonts,
   background: darkBG,
