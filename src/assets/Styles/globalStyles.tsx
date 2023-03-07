@@ -3,7 +3,11 @@ import { createGlobalStyle, css } from 'styled-components';
 import CycloneImage from '@/assets/images/bg-cyclone.jpg';
 import CycloneImageHorizontal from '@/assets/images/bg-cyclone-horizontal.jpg';
 
-const GlobalStyle = createGlobalStyle`
+interface GlobalProps {
+  readonly notFound?: boolean;
+}
+
+const GlobalStyle = createGlobalStyle<GlobalProps>`
 /* ======= */
 /* Resets */
 /* ===== */
