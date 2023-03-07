@@ -13,20 +13,23 @@ function FadeScroll({ children }) {
 
   const checkHorizontalFade = () => {
     const childRef = children.ref.current;
-    const overflow = childRef.clientWidth < childRef.scrollWidth;
-    const scrollAtStart = childRef.scrollLeft === 0;
-    const scrollAtEnd = childRef.scrollLeft === childRef.scrollLeftMax;
 
-    if (overflow) {
-      if (scrollAtStart) {
-        setFadeStatus('fade-right');
-      } else if (scrollAtEnd) {
-        setFadeStatus('fade-left');
+    if (childRef !== null) {
+      const overflow = childRef.clientWidth < childRef.scrollWidth;
+      const scrollAtStart = childRef.scrollLeft === 0;
+      const scrollAtEnd = childRef.scrollLeft === childRef.scrollLeftMax;
+
+      if (overflow) {
+        if (scrollAtStart) {
+          setFadeStatus('fade-right');
+        } else if (scrollAtEnd) {
+          setFadeStatus('fade-left');
+        } else {
+          setFadeStatus('fade-both');
+        }
       } else {
-        setFadeStatus('fade-both');
+        setFadeStatus(null);
       }
-    } else {
-      setFadeStatus(null);
     }
   };
 
