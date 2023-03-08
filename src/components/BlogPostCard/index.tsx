@@ -1,11 +1,22 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { ReactComponent as ShareSVG } from '@/assets/images/share.svg';
 
 import * as S from './BlogPostCard.styled';
 
-const BlogPostCard = ({ post }) => {
+interface BlogPostCardProps {
+  post: {
+    id: string;
+    title: string;
+    duration: number;
+    date: string;
+    topics: string[];
+    content: string;
+    url: string;
+  };
+}
+
+const BlogPostCard = ({ post }: BlogPostCardProps) => {
   return (
     <Link to={`/post/${post.id}`}>
       <S.Wrapper>
