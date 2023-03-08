@@ -8,12 +8,18 @@ import { ReactComponent as Check } from '@/assets/images/check.svg';
 
 import * as S from './Card.styled';
 
-function Card({ data, currentId, setCurrentId }) {
+interface CardProps {
+  data: Project[];
+  currentId: Project['id'];
+  setCurrentId: React.Dispatch<React.SetStateAction<Project['id']>>;
+}
+
+function Card({ data, currentId, setCurrentId }: CardProps) {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-  const titleRef = useRef();
-  const contentRef = useRef();
-  const liveSiteRef = useRef();
-  const sourceCodeRef = useRef();
+  const titleRef = useRef(null);
+  const contentRef = useRef(null);
+  const liveSiteRef = useRef(null);
+  const sourceCodeRef = useRef(null);
 
   const currentData = data.find(item => item.id === currentId);
 
@@ -21,7 +27,7 @@ function Card({ data, currentId, setCurrentId }) {
     setIsDropDownOpen(prevState => !prevState);
   };
 
-  const selectItem = id => {
+  const selectItem = (id: Project['id']) => {
     setCurrentId(id);
     setIsDropDownOpen(false);
   };
@@ -30,9 +36,14 @@ function Card({ data, currentId, setCurrentId }) {
     <S.Wrapper>
       <S.Header>
         <SwitchTransition>
-          <CSSTransition key={currentId} nodeRef={titleRef} classNames="fade" timeout={200}>
+          <CSSTransition
+            key={currentId}
+            nodeRef={titleRef}
+            classNames="fade"
+            timeout={200}
+          >
             <S.Title ref={titleRef} selectMode={isDropDownOpen}>
-              {currentData.title}
+              {currentData?.title}
             </S.Title>
           </CSSTransition>
         </SwitchTransition>
@@ -57,16 +68,21 @@ function Card({ data, currentId, setCurrentId }) {
           </List>
         </S.DropDownContainer>
         <SwitchTransition>
-          <CSSTransition key={currentId} nodeRef={contentRef} classNames="fade" timeout={200}>
+          <CSSTransition
+            key={currentId}
+            nodeRef={contentRef}
+            classNames="fade"
+            timeout={200}
+          >
             <S.Content ref={contentRef} isHidden={isDropDownOpen}>
               <S.Technologies>
-                {currentData.techs.map((tech, idx) => (
+                {currentData?.techs.map((tech, idx) => (
                   <li key={idx}>{tech}</li>
                 ))}
               </S.Technologies>
-              <S.Description>{currentData.desc}</S.Description>
+              <S.Description>{currentData?.desc}</S.Description>
               <S.Features>
-                {currentData.features.map((feature, idx) => (
+                {currentData?.features.map((feature, idx) => (
                   <li key={idx}>
                     <Check />
                     <p>{feature}</p>
@@ -78,18 +94,46 @@ function Card({ data, currentId, setCurrentId }) {
         </SwitchTransition>
         <S.Footer isHidden={isDropDownOpen}>
           <SwitchTransition>
-            <CSSTransition key={currentId} nodeRef={liveSiteRef} classNames="fade" timeout={200}>
-              <a ref={liveSiteRef} href={currentData.url} target="_blank" rel="noreferrer">
-                <Button variant="contained" color="black" disabled={!currentData.url}>
+            <CSSTransition
+              key={currentId}
+              nodeRef={liveSiteRef}
+              classNames="fade"
+              timeout={200}
+            >
+              <a
+                ref={liveSiteRef}
+                href={currentData?.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button
+                  variant="contained"
+                  color="black"
+                  disabled={!currentData?.url}
+                >
                   live site
                 </Button>
               </a>
             </CSSTransition>
           </SwitchTransition>
           <SwitchTransition>
-            <CSSTransition key={currentId} nodeRef={sourceCodeRef} classNames="fade" timeout={200}>
-              <a ref={sourceCodeRef} href={currentData.repository} target="_blank" rel="noreferrer">
-                <Button variant="outlined" color="black" disabled={!currentData.repository}>
+            <CSSTransition
+              key={currentId}
+              nodeRef={sourceCodeRef}
+              classNames="fade"
+              timeout={200}
+            >
+              <a
+                ref={sourceCodeRef}
+                href={currentData?.repository}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button
+                  variant="outlined"
+                  color="black"
+                  disabled={!currentData?.repository}
+                >
                   view code
                 </Button>
               </a>

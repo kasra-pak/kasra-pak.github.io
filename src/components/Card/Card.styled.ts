@@ -47,10 +47,11 @@ const Header = styled.div`
   transition: ${({ theme }) => theme.addTransitionOn(['border-color'])};
 `;
 
-const Title = styled.h2`
+const Title = styled.h2<{ selectMode: boolean }>`
   font-size: clamp(1.35rem, 6vw, 1.5rem);
   text-transform: capitalize;
-  text-shadow: ${({ theme, selectMode }) => selectMode && `0 0 3px hsl(${theme.colors.color1} / 0.1)`};
+  text-shadow: ${({ theme, selectMode }) =>
+    selectMode && `0 0 3px hsl(${theme.colors.color1} / 0.1)`};
   transition: ${({ theme }) => theme.addTransitionOn(['text-shadow'])};
 
   @media screen and (min-width: 650px) {
@@ -72,7 +73,7 @@ const Container = styled.div`
   padding: 0px 0.75em;
 `;
 
-const DropDownContainer = styled.div`
+const DropDownContainer = styled.div<{ isOpen: boolean }>`
   position: absolute;
   width: calc(100% - 1.5em);
   padding: 0.75em 0;
@@ -97,7 +98,7 @@ const DropDownContainer = styled.div`
   }
 `;
 
-const Content = styled.div`
+const Content = styled.div<{ isHidden: boolean }>`
   font-size: clamp(0.9rem, 3.75vw, 1rem);
   min-height: 200px;
   margin-bottom: 0.5em;
@@ -169,13 +170,14 @@ const Features = styled.ul`
   }
 `;
 
-const Footer = styled.div`
+const Footer = styled.div<{ isHidden: boolean }>`
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
   border-top: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.1);
   padding-top: 1em;
-  transition: ${({ theme }) => theme.addTransitionOn(['opacity', 'border-color'])};
+  transition: ${({ theme }) =>
+    theme.addTransitionOn(['opacity', 'border-color'])};
 
   opacity: ${props => (props.isHidden ? '0' : '1')};
 
@@ -188,4 +190,15 @@ const Footer = styled.div`
   }
 `;
 
-export { Wrapper, Header, Title, Container, DropDownContainer, Content, Technologies, Description, Features, Footer };
+export {
+  Wrapper,
+  Header,
+  Title,
+  Container,
+  DropDownContainer,
+  Content,
+  Technologies,
+  Description,
+  Features,
+  Footer,
+};

@@ -8,13 +8,17 @@ import * as S from './Projects.styled';
 function Projects() {
   const [currentProjectId, setCurrentProjectId] = useState('2');
 
-  const selectItem = id => {
+  const selectItem = (id: Project['id']) => {
     setCurrentProjectId(id);
   };
 
   return (
     <S.Wrapper>
-      <Card data={data} currentId={currentProjectId} setCurrentId={setCurrentProjectId} />
+      <Card
+        data={data}
+        currentId={currentProjectId}
+        setCurrentId={setCurrentProjectId}
+      />
       <S.ProjectsListContainer>
         <h2>projects list</h2>
         <List>
