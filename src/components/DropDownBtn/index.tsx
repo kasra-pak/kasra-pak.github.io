@@ -3,11 +3,12 @@ import { ReactComponent as ChevronDown } from '@/assets/images/chevron.svg';
 
 import * as S from './DropDownBtn.styled';
 
-function DropDownBtn({ isOpen, toggle }) {
-  // const [isOpen, setIsOpen] = useState(false);
+interface DropDownBtnProps {
+  isOpen: boolean;
+  toggle: () => void;
+}
 
-  // const toggle = () => setIsOpen(prevState => !prevState);
-
+function DropDownBtn({ isOpen, toggle }: DropDownBtnProps) {
   return (
     <S.Btn className={isOpen ? 'open' : ''} onClick={toggle}>
       <ChevronDown />
