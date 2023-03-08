@@ -1,20 +1,15 @@
 import React, { useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-import { lightTheme, darkTheme } from '@/assets/theme';
 import FadeScroll from '@/components/FadeScroll';
 import { ReactComponent as MoonLogo } from '@/assets/images/moon.svg';
 
+import { useThemeToggle } from '@/contexts/ThemeToggle';
 import * as S from './Header.styled';
-import { ThemeContext, useTheme } from 'styled-components';
 
 function Header() {
   const nodeRef = useRef(null);
-  const sth = useTheme(ThemeContext);
-
-  const toggleTheme = () => {
-    sth.setTheme(prevTheme => (prevTheme.name === 'light' ? darkTheme : lightTheme));
-  };
+  const { toggleTheme } = useThemeToggle();
 
   return (
     <S.Wrapper>

@@ -1,38 +1,36 @@
-import React, { useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
-import { ThemeProvider, ThemeContext } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
-import { lightTheme } from '@/assets/theme';
+import { ThemeToggleProvider, useThemeToggle } from '@/contexts/ThemeToggle';
+
 import router from '@/routes';
 
 import GlobalStyle from '@/assets/Styles/globalStyles';
 
 function App() {
-  const [theme, setTheme] = useState(lightTheme);
+  const { theme } = useThemeToggle();
 
   return (
-    <ThemeContext.Provider value={{ setTheme }}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <RouterProvider router={router} />
-        {/* <Routes>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <RouterProvider router={router} />
+      {/* <Routes>
         <Route path="/" element={<Page />}>
           <Route index element={<Home />} />
           <Route path="projects" element={<Projects />} />
           <Route path="blog" element={<NotReady />} />
-        </Route>
-        <Route
+          </Route>
+          <Route
           path="*"
           element={
             <>
               <GlobalStyle notFound />
               <NotFound />
-            </>
-          }
+              </>
+            }
           />
         </Routes> */}
-      </ThemeProvider>
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
 }
 
