@@ -1,10 +1,22 @@
-import React from 'react';
-
 import * as S from './Button.styled';
 
-function Button({ children, type, variant, color, elevated, ...rest }) {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'contained' | 'outlined';
+  color?: 'black' | 'blue' | 'white';
+  elevated?: boolean;
+}
+
+function Button({
+  children,
+  variant = 'contained',
+  color = 'blue',
+  elevated = false,
+  ...rest
+}: ButtonProps) {
+  console.log(rest);
+
   return (
-    <S.Btn type={type} variant={variant} elevated={elevated} color={color} {...rest}>
+    <S.Btn variant={variant} elevated={elevated} color={color} {...rest}>
       {children}
     </S.Btn>
   );

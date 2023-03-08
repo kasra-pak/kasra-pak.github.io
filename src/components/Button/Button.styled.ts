@@ -53,7 +53,13 @@ const elevated = css`
   }
 `;
 
-const Btn = styled.button`
+interface BtnProps {
+  variant: 'contained' | 'outlined';
+  color: 'black' | 'blue' | 'white';
+  elevated: boolean;
+}
+
+const Btn = styled.button<BtnProps>`
   --bg-color: ${({ theme }) => theme.colors.color2};
   --fg-color: ${({ theme }) => theme.colors.color2};
   font-size: clamp(0.9rem, 4vw, 1rem);
