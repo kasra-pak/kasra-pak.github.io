@@ -1,14 +1,14 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import FadeScroll from '../FadeScroll';
 import { toggleElement } from '@/utils';
 
 import * as S from './Topics.styled';
 
 const Topics = () => {
-  const [activeTopics, setActiveTopics] = useState([]);
-  const ref = useRef();
+  const [activeTopics, setActiveTopics] = useState<string[]>([]);
+  const ref = useRef(null);
 
-  const handleClick = e => {
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     const { value } = e.currentTarget.dataset;
     setActiveTopics(prevState => toggleElement(prevState, value));
   };
@@ -17,27 +17,47 @@ const Topics = () => {
     <FadeScroll>
       <S.Wrapper ref={ref}>
         <li>
-          <S.Item data-value="react" onClick={handleClick} active={activeTopics.includes('react')}>
+          <S.Item
+            data-value="react"
+            onClick={handleClick}
+            active={activeTopics.includes('react')}
+          >
             react
           </S.Item>
         </li>
         <li>
-          <S.Item data-value="philosophy" onClick={handleClick} active={activeTopics.includes('philosophy')}>
+          <S.Item
+            data-value="philosophy"
+            onClick={handleClick}
+            active={activeTopics.includes('philosophy')}
+          >
             philosophy
           </S.Item>
         </li>
         <li>
-          <S.Item data-value="javascript" onClick={handleClick} active={activeTopics.includes('javascript')}>
+          <S.Item
+            data-value="javascript"
+            onClick={handleClick}
+            active={activeTopics.includes('javascript')}
+          >
             javascript
           </S.Item>
         </li>
         <li>
-          <S.Item data-value="css" onClick={handleClick} active={activeTopics.includes('css')}>
+          <S.Item
+            data-value="css"
+            onClick={handleClick}
+            active={activeTopics.includes('css')}
+          >
             css
           </S.Item>
         </li>
         <li>
-          <S.Item data-value="life" onClick={handleClick} active={activeTopics.includes('life')}>
+          <S.Item
+            data-value="life"
+            onClick={handleClick}
+            active={activeTopics.includes('life')}
+          >
             life
           </S.Item>
         </li>
