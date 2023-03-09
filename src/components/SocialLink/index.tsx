@@ -1,8 +1,10 @@
-import React from 'react';
+import { AnchorHTMLAttributes } from 'react';
 
 import * as S from './SocialLink.styled';
 
-function SocialLink({ href, target, rel, children }) {
+interface SocialLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
+
+function SocialLink({ href, target, rel, children }: SocialLinkProps) {
   return (
     <S.Wrapper>
       <a href={href} target={target} rel={rel}>
