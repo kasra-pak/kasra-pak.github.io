@@ -25,19 +25,23 @@ function PageLayout() {
       <LeftSide />
       <S.Content>
         <Header />
-        <PageTransitionContainer>
-          <SwitchTransition>
-            <CSSTransition
-              key={location.pathname}
-              nodeRef={nodeRef}
-              timeout={transitionDelay}
-              classNames="page-transition"
-              unmountOnExit
-            >
-              {() => <div ref={nodeRef}>{currentOutlet}</div>}
-            </CSSTransition>
-          </SwitchTransition>
-        </PageTransitionContainer>
+
+        <SwitchTransition>
+          <CSSTransition
+            key={location.pathname}
+            nodeRef={nodeRef}
+            timeout={transitionDelay}
+            classNames="page-transition"
+            unmountOnExit
+          >
+            {() => (
+              <PageTransitionContainer ref={nodeRef}>
+                {currentOutlet}
+              </PageTransitionContainer>
+            )}
+          </CSSTransition>
+        </SwitchTransition>
+
         <Footer />
       </S.Content>
     </S.Wrapper>

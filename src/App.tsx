@@ -1,7 +1,7 @@
 import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import { ThemeToggleProvider, useThemeToggle } from '@/contexts/ThemeToggle';
+import { useThemeToggle } from '@/contexts/ThemeToggle';
 
 import router from '@/routes';
 

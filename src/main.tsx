@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from '@/App';
-import { ThemeToggleProvider, useThemeToggle } from '@/contexts/ThemeToggle';
+import { ThemeToggleProvider } from '@/contexts/ThemeToggle';
 
 const container = document.getElementById('root');
 
