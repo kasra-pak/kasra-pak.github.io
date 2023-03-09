@@ -1,8 +1,12 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
 import * as S from './List.styled';
 
-function List({ children }) {
+interface ListProps {
+  children: ReactNode;
+}
+
+function List({ children }: ListProps) {
   return <S.Wrapper>{children}</S.Wrapper>;
 }
 
