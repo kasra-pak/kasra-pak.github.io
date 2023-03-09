@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+interface WrapperProps {
+  fade: FadeStatus;
+}
+
+const Wrapper = styled.div<WrapperProps>`
   position: relative;
 
   &::before,
@@ -16,15 +20,25 @@ const Wrapper = styled.div`
   }
 
   &::before {
-    background: linear-gradient(to right, hsl(${({ theme }) => theme.colors.color5}), transparent);
+    background: linear-gradient(
+      to right,
+      hsl(${({ theme }) => theme.colors.color5}),
+      transparent
+    );
     left: 0;
-    opacity: ${props => (props.fade === 'fade-left' || props.fade === 'fade-both' ? '1' : '0')};
+    opacity: ${props =>
+      props.fade === 'fade-left' || props.fade === 'fade-both' ? '1' : '0'};
   }
 
   &::after {
-    background: linear-gradient(to left, hsl(${({ theme }) => theme.colors.color5}), transparent);
+    background: linear-gradient(
+      to left,
+      hsl(${({ theme }) => theme.colors.color5}),
+      transparent
+    );
     right: 0;
-    opacity: ${props => (props.fade === 'fade-right' || props.fade === 'fade-both' ? '1' : '0')};
+    opacity: ${props =>
+      props.fade === 'fade-right' || props.fade === 'fade-both' ? '1' : '0'};
   }
 `;
 

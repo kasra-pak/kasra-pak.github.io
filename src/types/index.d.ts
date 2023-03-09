@@ -8,3 +8,5 @@ interface Project {
   repository: string;
   screenshots: never[];
 }
+
+type FadeStatus = 'fade-left' | 'fade-right' | 'fade-both' | null;

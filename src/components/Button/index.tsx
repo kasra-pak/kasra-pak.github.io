@@ -13,8 +13,6 @@ function Button({
   elevated = false,
   ...rest
 }: ButtonProps) {
-  console.log(rest);
-
   return (
     <S.Btn variant={variant} elevated={elevated} color={color} {...rest}>
       {children}

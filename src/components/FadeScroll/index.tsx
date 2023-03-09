@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, ReactElement } from 'react';
 
 import * as S from './FadeScroll.styled';
 
-function FadeScroll({ children }) {
-  const [fadeStatus, setFadeStatus] = useState(null);
+interface FadeScrollProps {
+  // Should be typed as "ReactElement" which has a ref property;
+  // But for now i just type it as "any"
+  children: any;
+}
+
+function FadeScroll({ children }: FadeScrollProps) {
+  const [fadeStatus, setFadeStatus] = useState<FadeStatus>(null);
 
   useEffect(() => {
     checkHorizontalFade();
