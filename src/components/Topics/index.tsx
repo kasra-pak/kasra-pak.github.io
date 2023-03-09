@@ -10,7 +10,9 @@ const Topics = () => {
 
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     const { value } = e.currentTarget.dataset;
-    setActiveTopics(prevState => toggleElement(prevState, value));
+    if (value !== undefined) {
+      setActiveTopics(prevState => toggleElement(prevState, value));
+    }
   };
 
   return (

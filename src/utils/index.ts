@@ -1,4 +1,4 @@
-const toggleElement = (arr, element) => {
+const toggleElement = <T>(arr: T[], element: T) => {
   const newArr = [...arr];
   const index = newArr.indexOf(element);
 
