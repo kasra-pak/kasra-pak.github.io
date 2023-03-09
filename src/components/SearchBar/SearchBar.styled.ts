@@ -5,7 +5,8 @@ const Wrapper = styled.div`
   margin-block-end: 1em;
   border: 1px solid hsl(${({ theme }) => theme.colors.color2} / 0.2);
   border-radius: 0.25em;
-  transition: ${({ theme }) => theme.addTransitionOn(['background-color', 'border-color'])};
+  transition: ${({ theme }) =>
+    theme.addTransitionOn(['background-color', 'border-color'])};
 
   &:focus-within {
     background-color: hsl(${({ theme }) => theme.colors.color2} / 0.03);

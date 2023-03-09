@@ -86,4 +86,14 @@ const PostContent = styled.div`
   margin-block-start: 1.5em;
 `;
 
-export { Wrapper, Flex, Divider, Date, Duration, ShareBtn, Title, Topics, PostContent };
+export {
+  Wrapper,
+  Flex,
+  Divider,
+  Date,
+  Duration,
+  ShareBtn,
+  Title,
+  Topics,
+  PostContent,
+};

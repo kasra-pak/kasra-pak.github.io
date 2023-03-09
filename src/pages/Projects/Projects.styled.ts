@@ -12,7 +12,11 @@ const Wrapper = styled.main`
 `;
 
 const ProjectsListContainer = styled.section`
-  background: linear-gradient(to bottom, hsl(${({ theme }) => theme.colors.color3} / 0.2), transparent);
+  background: linear-gradient(
+    to bottom,
+    hsl(${({ theme }) => theme.colors.color3} / 0.2),
+    transparent
+  );
   border-radius: 0.5em;
   padding: 1em;
   display: none;

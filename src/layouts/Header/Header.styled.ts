@@ -63,7 +63,8 @@ const List = styled.ul`
 const ListItem = styled.li`
   color: hsl(${({ theme }) => theme.colors.color2});
   fill: hsl(${({ theme }) => theme.colors.color2});
-  transition: ${({ theme }) => theme.addTransitionOn(['fill', 'color', 'text-shadow'])};
+  transition: ${({ theme }) =>
+    theme.addTransitionOn(['fill', 'color', 'text-shadow'])};
   cursor: pointer;
 
   a {

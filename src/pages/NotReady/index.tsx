@@ -15,7 +15,8 @@ function NotReady() {
           you came here sooon
         </S.Title>
         <S.Subtitle>
-          This page might be available on your next visit, but for now We suggest you back to home.
+          This page might be available on your next visit, but for now We
+          suggest you back to home.
         </S.Subtitle>
         <Link to="/">
           <Button type="button" variant="contained" color="blue" elevated>

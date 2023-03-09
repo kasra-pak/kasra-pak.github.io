@@ -17,15 +17,27 @@ function Footer() {
           <Email>kasrapak69@gmail.com</Email>
         </SocialLink>
 
-        <SocialLink href="https://github.com/kasra-pak" target="_blank" rel="noreferrer">
+        <SocialLink
+          href="https://github.com/kasra-pak"
+          target="_blank"
+          rel="noreferrer"
+        >
           <GithubLogo />
         </SocialLink>
 
-        <SocialLink href="https://www.linkedin.com/in/kasra-pak" target="_blank" rel="noreferrer">
+        <SocialLink
+          href="https://www.linkedin.com/in/kasra-pak"
+          target="_blank"
+          rel="noreferrer"
+        >
           <LinkedinLogo />
         </SocialLink>
 
-        <SocialLink href="https://t.me/kasra_pak" target="_blank" rel="noreferrer">
+        <SocialLink
+          href="https://t.me/kasra_pak"
+          target="_blank"
+          rel="noreferrer"
+        >
           <TelegramLogo />
         </SocialLink>
 

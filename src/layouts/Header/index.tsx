@@ -22,12 +22,18 @@ function Header() {
         <FadeScroll>
           <S.List ref={nodeRef}>
             <S.ListItem>
-              <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) => (isActive ? 'active' : undefined)}
+              >
                 blog
               </NavLink>
             </S.ListItem>
             <S.ListItem>
-              <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+              <NavLink
+                to="/projects"
+                className={({ isActive }) => (isActive ? 'active' : undefined)}
+              >
                 projects
               </NavLink>
             </S.ListItem>

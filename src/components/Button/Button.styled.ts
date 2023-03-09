@@ -6,7 +6,8 @@ const variants = {
     color: hsl(var(--fg-color));
     border: 1px solid hsl(var(--bg-color));
 
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease;
 
     &:hover {
       background-color: transparent;
@@ -85,7 +86,13 @@ const Btn = styled.button<BtnProps>`
     font-size: clamp(1rem, 2vw, 1.25rem);
   }
 
-  transition: ${({ theme }) => theme.addTransitionOn(['color', 'background-color', 'border-color', 'box-shadow'])};
+  transition: ${({ theme }) =>
+    theme.addTransitionOn([
+      'color',
+      'background-color',
+      'border-color',
+      'box-shadow',
+    ])};
 `;
 
 export { Btn };

@@ -94,4 +94,15 @@ const Duration = styled.p`
   opacity: 0.8;
 `;
 
-export { Wrapper, Header, Footer, Divider, Title, Content, Topics, ShareBtn, Date, Duration };
+export {
+  Wrapper,
+  Header,
+  Footer,
+  Divider,
+  Title,
+  Content,
+  Topics,
+  ShareBtn,
+  Date,
+  Duration,
+};
