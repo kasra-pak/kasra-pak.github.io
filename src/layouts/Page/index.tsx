@@ -2,6 +2,7 @@ import { useLocation, useOutlet } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import {
   transitionDelay,
+  transitionClassName,
   PageTransitionContainer,
 } from '@/assets/Styles/pageTransition';
 
@@ -31,7 +32,7 @@ function PageLayout() {
             key={location.pathname}
             nodeRef={nodeRef}
             timeout={transitionDelay}
-            classNames="page-transition"
+            classNames={transitionClassName}
             unmountOnExit
           >
             {() => (

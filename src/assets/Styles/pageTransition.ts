@@ -1,27 +1,28 @@
 import styled from 'styled-components';
 
 const transitionDelay = 200;
+const transitionClassName = 'page-transition';
 
 const PageTransitionContainer = styled.div`
   flex-grow: 1;
 
-  &.page-transition-enter {
+  &.${transitionClassName}-enter {
     opacity: 0;
   }
 
-  &.page-transition-enter-active {
+  &.${transitionClassName}-enter-active {
     opacity: 1;
     transition: opacity ${transitionDelay}ms;
   }
 
-  &.page-transition-exit {
+  &.${transitionClassName}-exit {
     opacity: 1;
   }
 
-  &.page-transition-exit-active {
+  &.${transitionClassName}-exit-active {
     opacity: 0;
     transition: opacity ${transitionDelay}ms;
   }
 `;
 
-export { transitionDelay, PageTransitionContainer };
+export { transitionDelay, transitionClassName, PageTransitionContainer };
