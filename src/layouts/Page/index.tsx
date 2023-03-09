@@ -1,7 +1,9 @@
-import React from 'react';
 import { useLocation, useOutlet } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
-import { transitionDelay, PageTransitionContainer } from '@/assets/Styles/pageTransition';
+import {
+  transitionDelay,
+  PageTransitionContainer,
+} from '@/assets/Styles/pageTransition';
 
 import LeftSide from '@/layouts/LeftSide';
 import Header from '@/layouts/Header';
@@ -14,7 +16,9 @@ function PageLayout() {
   const location = useLocation();
   const currentOutlet = useOutlet();
 
-  const { nodeRef } = routes.find(route => route.path === location.pathname) ?? {};
+  const nodeRef = routes.find(
+    route => route.path === location.pathname,
+  )?.nodeRef;
 
   return (
     <S.Wrapper>

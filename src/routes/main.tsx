@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import { createRef } from 'react';
 
 import Page from '@/layouts/Page';
 import Home from '@/pages/Home';
@@ -7,10 +7,22 @@ import Blog from '@/pages/Blog';
 import Post from '@/pages/Post';
 
 const routes = [
-  { path: '/', element: <Home />, nodeRef: createRef() },
-  { path: '/projects', element: <Projects />, nodeRef: createRef() },
-  { path: '/blog', element: <Blog />, nodeRef: createRef() },
-  { path: '/post/:postId', element: <Post />, nodeRef: createRef() },
+  { path: '/', element: <Home />, nodeRef: createRef<HTMLDivElement>() },
+  {
+    path: '/projects',
+    element: <Projects />,
+    nodeRef: createRef<HTMLDivElement>(),
+  },
+  {
+    path: '/blog',
+    element: <Blog />,
+    nodeRef: createRef<HTMLDivElement>(),
+  },
+  {
+    path: '/post/:postId',
+    element: <Post />,
+    nodeRef: createRef<HTMLDivElement>(),
+  },
 ];
 
 const main = {
