@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactComponent as ChevronDown } from '@/assets/images/chevron.svg';
 
 import * as S from './DropDownBtn.styled';

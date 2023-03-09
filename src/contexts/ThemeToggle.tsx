@@ -1,4 +1,4 @@
-import { useState, useContext, createContext, ReactNode } from 'react';
+import React, { useState, useContext, createContext, ReactNode } from 'react';
 import { DefaultTheme } from 'styled-components';
 
 import { darkTheme, lightTheme } from '@/assets/theme';
@@ -15,7 +15,7 @@ interface ThemeToggleProviderProps {
 const initialValue = {
   theme: lightTheme,
   toggleTheme: () => {
-    console.log('shit');
+    return;
   },
 };
 
@@ -28,7 +28,11 @@ const ThemeToggleProvider = ({ children }: ThemeToggleProviderProps) => {
     setTheme(prevState => (prevState === lightTheme ? darkTheme : lightTheme));
   };
 
-  return <ThemeToggleContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeToggleContext.Provider>;
+  return (
+    <ThemeToggleContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeToggleContext.Provider>
+  );
 };
 
 const useThemeToggle = () => {

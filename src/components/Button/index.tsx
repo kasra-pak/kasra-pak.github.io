@@ -1,3 +1,4 @@
+import React from 'react';
 import * as S from './Button.styled';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

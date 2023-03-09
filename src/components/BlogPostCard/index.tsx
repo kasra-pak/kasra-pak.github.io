@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { ReactComponent as ShareSVG } from '@/assets/images/share.svg';

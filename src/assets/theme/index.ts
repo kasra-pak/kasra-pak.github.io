@@ -9,7 +9,8 @@ const fonts = {
   font3: '"Oregano", cursive',
 };
 
-const addTransitionOn = (arrayOfProperties: string[]) => arrayOfProperties.map(arg => `${arg} .2s ease`).join(', ');
+const addTransitionOn = (arrayOfProperties: string[]) =>
+  arrayOfProperties.map(arg => `${arg} .2s ease`).join(', ');
 
 const lightTheme: DefaultTheme = {
   name: 'light',

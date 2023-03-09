@@ -23,6 +23,5 @@ Designed and Developed by Me
 - [ ] Left side background Image loads slowly on first visit.
 - [ ] On projects page the Left side becomes a link to the active project screenshots.
 - [ ] Cyclone hover effect.
-- [ ] Migrate to Typescript.
 - [ ] Test with Jest & Cypress.
 - [ ] Optimize loading time.
