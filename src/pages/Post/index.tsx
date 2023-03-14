@@ -29,9 +29,6 @@ const Post = () => {
         </S.Topics>
         <S.PostContent>{post?.content}</S.PostContent>
       </article>
-      <section style={{ border: '2px solid black', flex: '1 0 30%' }}>
-        <h2>Similar Posts</h2>
-      </section>
     </S.Wrapper>
   );
 };
