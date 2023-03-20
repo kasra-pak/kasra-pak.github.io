@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import data from '@/data/blogPosts.json';
 import { ReactComponent as ShareSVG } from '@/assets/images/share.svg';
-
 import * as S from './Post.styled';
 
 const Post = () => {
   const { postId } = useParams();
   const post = data.find(post => post.id === postId);
+  const [content, setContent] = useState('');
+
+  useEffect(() => {
+    if (post?.contentPath) {
+      import(/* @vite-ignore */ post.contentPath).then(module => {
+        setContent(module.default);
+      });
+    }
+  }, []);
 
   return (
     <S.Wrapper>
@@ -27,7 +35,7 @@ const Post = () => {
             <li key={idx}>{topic}</li>
           ))}
         </S.Topics>
-        <S.PostContent>{post?.content}</S.PostContent>
+        <S.PostContent>{content}</S.PostContent>
       </article>
     </S.Wrapper>
   );

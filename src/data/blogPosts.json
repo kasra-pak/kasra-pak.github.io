@@ -5,25 +5,7 @@
     "duration": 10,
     "date": "march 01, 2021",
     "topics": ["react", "frontend"],
-    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laborum, minima distinctio nobis ut a veniam reiciendis esse maxime repellendus.",
-    "url": "figure this out"
-  },
-  {
-    "id": "2",
-    "title": "i know that i know nothing",
-    "duration": 16,
-    "date": "october 19, 2020",
-    "topics": ["life", "philosophy"],
-    "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, architecto? Minima cupiditate, facere eveniet fuga error tempore quo expedita dolor nesciunt quia possimus, corrupti animi nemo itaque, iure debitis placeat quam est. Distinctio, beatae nostrum?",
-    "url": "figure this out"
-  },
-  {
-    "id": "3",
-    "title": "CSS variables",
-    "duration": 6,
-    "date": "january 21, 2018",
-    "topics": ["frontend", "css"],
-    "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci sunt illum explicabo quis veritatis! Velit consequatur officiis labore possimus eos perferendis, quis placeat, itaque, dolore eligendi hic eum architecto aperiam?",
+    "contentPath": "/src/content/sth.mdx",
     "url": "figure this out"
   }
 ]

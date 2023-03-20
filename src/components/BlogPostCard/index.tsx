@@ -12,7 +12,7 @@ interface BlogPostCardProps {
     duration: number;
     date: string;
     topics: string[];
-    content: string;
+    contentPath: string;
     url: string;
   };
 }
@@ -32,7 +32,7 @@ const BlogPostCard = ({ post }: BlogPostCardProps) => {
           </S.ShareBtn>
         </S.Header>
         <S.Title>{post.title}</S.Title>
-        <S.Content>{post.content}</S.Content>
+        <S.Content>Figure this out</S.Content>
         <S.Divider />
         <S.Footer>
           <S.Date>{post.date}</S.Date>
