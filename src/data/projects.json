@@ -13,6 +13,7 @@
     "repository": "https://github.com/kasra-pak/fancy-todo",
     "screenshots": []
   },
+  
   {
     "id": "1",
     "title": "space tourism",
@@ -23,16 +24,18 @@
     "repository": "https://github.com/kasra-pak/space-tourism-website",
     "screenshots": []
   },
+
   {
     "id": "5",
     "title": "movie database",
     "desc": "A website that provides recent information and details about movies, tv shows, etc. Uses The Movie DataBase (TMDB) API as a backbone.",
     "techs": ["react", "tailwind CSS", "firebase", "API"],
     "features": ["login/logout", "custom watchlist"],
-    "url": "",
+    "url": "https://movie-planet.netlify.app/",
     "repository": "https://github.com/kasra-pak/movie-db-website",
     "screenshots": []
   },
+
   {
     "id": "3",
     "title": "rest countries api",
@@ -48,6 +51,7 @@
     "repository": "https://github.com/kasra-pak/rest-countries-api-with-dark-theme",
     "screenshots": []
   },
+
   {
     "id": "4",
     "title": "fylo landing page",
