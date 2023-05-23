@@ -5,6 +5,7 @@ import Home from '@/pages/Home';
 import Projects from '@/pages/Projects';
 import Blog from '@/pages/Blog';
 import Post from '@/pages/Post';
+import NotReady from '@/pages/NotReady';
 
 const routes = [
   { path: '/', element: <Home />, nodeRef: createRef<HTMLDivElement>() },
@@ -15,7 +16,7 @@ const routes = [
   },
   {
     path: '/blog',
-    element: <Blog />,
+    element: <NotReady />,
     nodeRef: createRef<HTMLDivElement>(),
   },
   {

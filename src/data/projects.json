@@ -1,5 +1,19 @@
 [
   {
+    "id": "5",
+    "title": "movie database",
+    "desc": "A website that provides recent information and details about movies, tv shows, etc. Uses The Movie DataBase (TMDB) API as a backbone.",
+    "techs": ["react", "tailwind CSS", "firebase", "API"],
+    "features": [
+      "login system integrated with Firebase Auth",
+      "user custom watchlist stored in Firebase Firestore"
+    ],
+    "url": "https://movie-planet.netlify.app/",
+    "repository": "https://github.com/kasra-pak/movie-db-website",
+    "screenshots": []
+  },
+
+  {
     "id": "2",
     "title": "fancy todo",
     "desc": "The classic todo app with a few twists!",
@@ -13,7 +27,7 @@
     "repository": "https://github.com/kasra-pak/fancy-todo",
     "screenshots": []
   },
-  
+
   {
     "id": "1",
     "title": "space tourism",
@@ -22,17 +36,6 @@
     "features": [],
     "url": "https://kasra-pak.github.io/space-tourism-website/",
     "repository": "https://github.com/kasra-pak/space-tourism-website",
-    "screenshots": []
-  },
-
-  {
-    "id": "5",
-    "title": "movie database",
-    "desc": "A website that provides recent information and details about movies, tv shows, etc. Uses The Movie DataBase (TMDB) API as a backbone.",
-    "techs": ["react", "tailwind CSS", "firebase", "API"],
-    "features": ["login/logout", "custom watchlist"],
-    "url": "https://movie-planet.netlify.app/",
-    "repository": "https://github.com/kasra-pak/movie-db-website",
     "screenshots": []
   },
 

@@ -6,7 +6,7 @@ import data from '@/data/projects.json';
 import * as S from './Projects.styled';
 
 function Projects() {
-  const [currentProjectId, setCurrentProjectId] = useState('2');
+  const [currentProjectId, setCurrentProjectId] = useState('5');
 
   const selectItem = (id: Project['id']) => {
     setCurrentProjectId(id);
