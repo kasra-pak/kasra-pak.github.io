@@ -15,7 +15,7 @@ function Home() {
           Frontend Developer
         </S.Title>
         <S.Subtitle>
-          I&apos;m a software engineer based in Iran, Graduated from the
+          I&apos;m a software engineer, Graduated from the
           University of Kurdistan. My attention to detail motivates me to
           enhance what users see (UI) and what developers perceive (code). I
           also enjoy learning new things from new folks.
